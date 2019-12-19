@@ -1,0 +1,262 @@
+fileFormatVersion: 2
+guid: b7344698f357d4746a907243c3659487
+timeCreated: 1521966956
+licenseType: Store
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Bed
+    100002: Book
+    100004: Books  1
+    100006: Books  1.001
+    100008: Books  1.002
+    100010: Books  1.003
+    100012: Books 2
+    100014: Books 2.001
+    100016: Books 2.002
+    100018: Books 2.003
+    100020: Chair
+    100022: Computer
+    100024: Computer.001
+    100026: Computer.002
+    100028: Computer.003
+    100030: Escritorio
+    100032: //RootNode
+    100034: Scene
+    100036: Trash
+    100038: Trasher
+    100040: Window
+    400000: Bed
+    400002: Book
+    400004: Books  1
+    400006: Books  1.001
+    400008: Books  1.002
+    400010: Books  1.003
+    400012: Books 2
+    400014: Books 2.001
+    400016: Books 2.002
+    400018: Books 2.003
+    400020: Chair
+    400022: Computer
+    400024: Computer.001
+    400026: Computer.002
+    400028: Computer.003
+    400030: Escritorio
+    400032: //RootNode
+    400034: Scene
+    400036: Trash
+    400038: Trasher
+    400040: Window
+    2300000: Bed
+    2300002: Book
+    2300004: Books  1
+    2300006: Books  1.001
+    2300008: Books  1.002
+    2300010: Books  1.003
+    2300012: Books 2
+    2300014: Books 2.001
+    2300016: Books 2.002
+    2300018: Books 2.003
+    2300020: Chair
+    2300022: Computer
+    2300024: Computer.001
+    2300026: Computer.002
+    2300028: Computer.003
+    2300030: Escritorio
+    2300032: Scene
+    2300034: Trash
+    2300036: Trasher
+    2300038: Window
+    3300000: Bed
+    3300002: Book
+    3300004: Books  1
+    3300006: Books  1.001
+    3300008: Books  1.002
+    3300010: Books  1.003
+    3300012: Books 2
+    3300014: Books 2.001
+    3300016: Books 2.002
+    3300018: Books 2.003
+    3300020: Chair
+    3300022: Computer
+    3300024: Computer.001
+    3300026: Computer.002
+    3300028: Computer.003
+    3300030: Escritorio
+    3300032: Scene
+    3300034: Trash
+    3300036: Trasher
+    3300038: Window
+    4300000: Computer.003
+    4300002: Books 2.003
+    4300004: Books 2.002
+    4300006: Books 2.001
+    4300008: Books  1.003
+    4300010: Books  1.002
+    4300012: Books  1.001
+    4300014: Computer.001
+    4300016: Computer.002
+    4300018: Book
+    4300020: Computer
+    4300022: Books  1
+    4300024: Books 2
+    4300026: Escritorio
+    4300028: Chair
+    4300030: Bed
+    4300032: Trash
+    4300034: Trasher
+    4300036: Window
+    4300038: Scene
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bed
+    second: {fileID: 2100000, guid: f37b8daf995ecfd4fa2ec3a42ab9d422, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blue Book
+    second: {fileID: 2100000, guid: f2c86620272fe8e45a037291800719ab, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brown
+    second: {fileID: 2100000, guid: 62b54f8b2eb2c5e479f9cffd2d829145, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Display
+    second: {fileID: 2100000, guid: 662e18f21d55b874e92d35eba1de1615, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Green
+    second: {fileID: 2100000, guid: 9ab111e955a928240bff8467869215d8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Orange
+    second: {fileID: 2100000, guid: d876d6165a6cb9146b6db87c31395323, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Red Book
+    second: {fileID: 2100000, guid: f6f61a9b0a9fd3c409b290410effc35d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: White
+    second: {fileID: 2100000, guid: 49403a7f22ff99e4ca70d47be5a63114, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood
+    second: {fileID: 2100000, guid: a2328e3d7d5a8084589eedf665dc0c66, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood 2
+    second: {fileID: 2100000, guid: eb7270c01fed69d4e9c7add1a599a426, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood 3
+    second: {fileID: 2100000, guid: 9bdcb67c1483a08469a1ba28d9ea5f41, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood 4
+    second: {fileID: 2100000, guid: 4d5cfaec5b8cd244f8fb44101bf5dad4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Yelllow Book
+    second: {fileID: 2100000, guid: d5a84220cf353e742ae31db2b6c8beff, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Z
+    second: {fileID: 2100000, guid: f480796d0c95b2a448fb573689207d77, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Z2
+    second: {fileID: 2100000, guid: d8ccf89df742b4f4fa050522c961b1a0, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

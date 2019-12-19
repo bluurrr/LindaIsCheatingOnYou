@@ -1,0 +1,212 @@
+fileFormatVersion: 2
+guid: b96837df21625de4185fd7bc5a57c3a2
+timeCreated: 1521966957
+licenseType: Store
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Inodoro
+    100004: Key Shower
+    100006: Lavamanos
+    100008: Mirror
+    100010: Object 1
+    100012: Object 2
+    100014: Object 3
+    100016: Room
+    100018: Shower
+    100020: Shower Piece
+    100022: Tina
+    100024: Toalla 1
+    100026: Toalla 2
+    100028: Toalla 3
+    400000: //RootNode
+    400002: Inodoro
+    400004: Key Shower
+    400006: Lavamanos
+    400008: Mirror
+    400010: Object 1
+    400012: Object 2
+    400014: Object 3
+    400016: Room
+    400018: Shower
+    400020: Shower Piece
+    400022: Tina
+    400024: Toalla 1
+    400026: Toalla 2
+    400028: Toalla 3
+    2300000: Inodoro
+    2300002: Key Shower
+    2300004: Lavamanos
+    2300006: Mirror
+    2300008: Object 1
+    2300010: Object 2
+    2300012: Object 3
+    2300014: Room
+    2300016: Shower
+    2300018: Shower Piece
+    2300020: Tina
+    2300022: Toalla 1
+    2300024: Toalla 2
+    2300026: Toalla 3
+    3300000: Inodoro
+    3300002: Key Shower
+    3300004: Lavamanos
+    3300006: Mirror
+    3300008: Object 1
+    3300010: Object 2
+    3300012: Object 3
+    3300014: Room
+    3300016: Shower
+    3300018: Shower Piece
+    3300020: Tina
+    3300022: Toalla 1
+    3300024: Toalla 2
+    3300026: Toalla 3
+    4300000: Tina
+    4300002: Inodoro
+    4300004: Key Shower
+    4300006: Shower
+    4300008: Toalla 2
+    4300010: Object 3
+    4300012: Shower Piece
+    4300014: Object 2
+    4300016: Toalla 1
+    4300018: Object 1
+    4300020: Mirror
+    4300022: Toalla 3
+    4300024: Lavamanos
+    4300026: Room
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blue
+    second: {fileID: 2100000, guid: ce8c2ad68e877f84599b5de514e4da17, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blue 2
+    second: {fileID: 2100000, guid: 978766e982b340b47a50a0e830d4a507, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blue 3
+    second: {fileID: 2100000, guid: c7183a928279b664a9cbd2b61bbcf217, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dark Grery
+    second: {fileID: 2100000, guid: 146b476df7ae5bd40a9cd86ff996bf74, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Gold
+    second: {fileID: 2100000, guid: 4ab79d4b37567e647a41e4cf56c5dd57, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Green 1
+    second: {fileID: 2100000, guid: c9d91c1edcf2105439fdffbb14a82bf1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Green 2
+    second: {fileID: 2100000, guid: 8c5b32f3cd3fc714e9b45eee0cbfef6c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Grey
+    second: {fileID: 2100000, guid: b6644824ce9bdc24ca7f27cd5720a3ca, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: d709cec6296f9ed47bc7b6a45346d059, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: White
+    second: {fileID: 2100000, guid: 49403a7f22ff99e4ca70d47be5a63114, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood
+    second: {fileID: 2100000, guid: a2328e3d7d5a8084589eedf665dc0c66, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

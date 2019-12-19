@@ -1,0 +1,262 @@
+fileFormatVersion: 2
+guid: dde45712ec3ea1044a60b3f86f07e3e4
+timeCreated: 1521966957
+licenseType: Store
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Bed
+    100002: Chair
+    100004: Coffee
+    100006: //RootNode
+    100008: Keyboard
+    100010: Mouse
+    100012: Objects
+    100014: PC
+    100016: TV 1
+    100018: TV 2
+    100020: Wall Paint
+    100022: Watch
+    100024: Window
+    100026: Window.001
+    100028: Window.002
+    400000: Bed
+    400002: Chair
+    400004: Coffee
+    400006: //RootNode
+    400008: Keyboard
+    400010: Mouse
+    400012: Objects
+    400014: PC
+    400016: TV 1
+    400018: TV 2
+    400020: Wall Paint
+    400022: Watch
+    400024: Window
+    400026: Window.001
+    400028: Window.002
+    2300000: Bed
+    2300002: Chair
+    2300004: Coffee
+    2300006: Keyboard
+    2300008: Mouse
+    2300010: Objects
+    2300012: PC
+    2300014: TV 1
+    2300016: TV 2
+    2300018: Wall Paint
+    2300020: Watch
+    2300022: Window
+    2300024: Window.001
+    2300026: Window.002
+    3300000: Bed
+    3300002: Chair
+    3300004: Coffee
+    3300006: Keyboard
+    3300008: Mouse
+    3300010: Objects
+    3300012: PC
+    3300014: TV 1
+    3300016: TV 2
+    3300018: Wall Paint
+    3300020: Watch
+    3300022: Window
+    3300024: Window.001
+    3300026: Window.002
+    4300000: Window
+    4300002: Bed
+    4300004: PC
+    4300006: Watch
+    4300008: Objects
+    4300010: Wall Paint
+    4300012: Coffee
+    4300014: Chair
+    4300016: Mouse
+    4300018: TV 1
+    4300020: TV 2
+    4300022: Keyboard
+    4300024: Window.001
+    4300026: Window.002
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Beige
+    second: {fileID: 2100000, guid: 5d50b67f87a6f5248b19f40973980b7c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Black
+    second: {fileID: 2100000, guid: a1cc0885c7fd5d3499d8f0ea4dfed238, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blue
+    second: {fileID: 2100000, guid: ce8c2ad68e877f84599b5de514e4da17, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blue 2
+    second: {fileID: 2100000, guid: 978766e982b340b47a50a0e830d4a507, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blue 3
+    second: {fileID: 2100000, guid: c7183a928279b664a9cbd2b61bbcf217, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blue 4
+    second: {fileID: 2100000, guid: ac22c747ae4236d4b8931b90cf07e559, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brown
+    second: {fileID: 2100000, guid: 62b54f8b2eb2c5e479f9cffd2d829145, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Floor
+    second: {fileID: 2100000, guid: 5ae9cb055ab85034ead26e5f15178c8b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Green 1
+    second: {fileID: 2100000, guid: c9d91c1edcf2105439fdffbb14a82bf1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Green 2
+    second: {fileID: 2100000, guid: 8c5b32f3cd3fc714e9b45eee0cbfef6c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Green 3
+    second: {fileID: 2100000, guid: a97da001ad4c03c40a4ffbe5810d2a1f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Grey 1
+    second: {fileID: 2100000, guid: 6d5dcdd08cbcd964d81fdcbd39c941ac, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Grey 2
+    second: {fileID: 2100000, guid: ec3d66c868f255d4d974429083f87c5e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Grey 3
+    second: {fileID: 2100000, guid: af5e30a62740ee646b4e9c518cc1cf93, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Red
+    second: {fileID: 2100000, guid: 5b507c83fee26324da1b1d878d4499d3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rose
+    second: {fileID: 2100000, guid: d4e886e62442ee6409b0078188f20f9c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Violet
+    second: {fileID: 2100000, guid: fdfbea9280cd88d46ab88488bfcf7a6a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: White
+    second: {fileID: 2100000, guid: 49403a7f22ff99e4ca70d47be5a63114, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: White 2
+    second: {fileID: 2100000, guid: 36c0126a7b07cab4a95018d12e7b4150, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood
+    second: {fileID: 2100000, guid: a2328e3d7d5a8084589eedf665dc0c66, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Yellow
+    second: {fileID: 2100000, guid: bc6d6cf56532b52449e9509c9de73386, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

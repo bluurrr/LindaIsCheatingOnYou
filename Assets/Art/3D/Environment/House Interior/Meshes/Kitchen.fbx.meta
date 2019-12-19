@@ -1,0 +1,177 @@
+fileFormatVersion: 2
+guid: 40eddcbf1425f914488e4e61a48a833b
+timeCreated: 1521966955
+licenseType: Store
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: 1
+    100002: 2
+    100004: Coffee
+    100006: Cook
+    100008: Freezer
+    100010: //RootNode
+    100012: Kitchen 1
+    100014: Kitchen 2
+    100016: Make Coffee
+    100018: Microwave
+    100020: Room
+    100022: Room.001
+    400000: 1
+    400002: 2
+    400004: Coffee
+    400006: Cook
+    400008: Freezer
+    400010: //RootNode
+    400012: Kitchen 1
+    400014: Kitchen 2
+    400016: Make Coffee
+    400018: Microwave
+    400020: Room
+    400022: Room.001
+    2300000: 1
+    2300002: 2
+    2300004: Coffee
+    2300006: Cook
+    2300008: Freezer
+    2300010: Kitchen 1
+    2300012: Kitchen 2
+    2300014: Make Coffee
+    2300016: Microwave
+    2300018: Room
+    2300020: Room.001
+    3300000: 1
+    3300002: 2
+    3300004: Coffee
+    3300006: Cook
+    3300008: Freezer
+    3300010: Kitchen 1
+    3300012: Kitchen 2
+    3300014: Make Coffee
+    3300016: Microwave
+    3300018: Room
+    3300020: Room.001
+    4300000: Coffee
+    4300002: Make Coffee
+    4300004: Microwave
+    4300006: Room.001
+    4300008: Freezer
+    4300010: Cook
+    4300012: 1
+    4300014: Kitchen 1
+    4300016: 2
+    4300018: Kitchen 2
+    4300020: Room
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brown
+    second: {fileID: 2100000, guid: 62b54f8b2eb2c5e479f9cffd2d829145, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dark
+    second: {fileID: 2100000, guid: f9b3483b72231e94ab0dd835d5bdc738, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plate
+    second: {fileID: 2100000, guid: e5be46b4a294094469f30bece4e073f1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: White
+    second: {fileID: 2100000, guid: 49403a7f22ff99e4ca70d47be5a63114, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Windows
+    second: {fileID: 2100000, guid: 17546d2f4aba87346be0b9b7267c2c6c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Yellow
+    second: {fileID: 2100000, guid: bc6d6cf56532b52449e9509c9de73386, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: grey
+    second: {fileID: 2100000, guid: b6644824ce9bdc24ca7f27cd5720a3ca, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

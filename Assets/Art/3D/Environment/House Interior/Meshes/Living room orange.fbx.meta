@@ -1,0 +1,317 @@
+fileFormatVersion: 2
+guid: 9d18023dfd840cc46ae821fdd754e84b
+timeCreated: 1521443653
+licenseType: Store
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Alfombra
+    100002: Art 1
+    100004: Art 2
+    100006: Art 3
+    100008: Blu-ray
+    100010: Bonsai
+    100012: Bonsai 2
+    100014: Book 1
+    100016: Book 10
+    100018: Book 11
+    100020: Book 2
+    100022: Book 3
+    100024: Book 4
+    100026: Book 5
+    100028: Book 6
+    100030: Book 7
+    100032: Book 8
+    100034: Book 9
+    100036: Control
+    100038: Corneta
+    100040: Lampara
+    100042: //RootNode
+    100044: Mesa
+    100046: Mesa 2
+    100048: Obiect 1
+    100050: Object 2
+    100052: Object 3
+    100054: Room
+    100056: Sofa
+    100058: Table 1
+    100060: Table 2
+    100062: Table 3
+    100064: TV1
+    100066: Window
+    400000: Alfombra
+    400002: Art 1
+    400004: Art 2
+    400006: Art 3
+    400008: Blu-ray
+    400010: Bonsai
+    400012: Bonsai 2
+    400014: Book 1
+    400016: Book 10
+    400018: Book 11
+    400020: Book 2
+    400022: Book 3
+    400024: Book 4
+    400026: Book 5
+    400028: Book 6
+    400030: Book 7
+    400032: Book 8
+    400034: Book 9
+    400036: Control
+    400038: Corneta
+    400040: Lampara
+    400042: //RootNode
+    400044: Mesa
+    400046: Mesa 2
+    400048: Obiect 1
+    400050: Object 2
+    400052: Object 3
+    400054: Room
+    400056: Sofa
+    400058: Table 1
+    400060: Table 2
+    400062: Table 3
+    400064: TV1
+    400066: Window
+    2300000: Alfombra
+    2300002: Art 1
+    2300004: Art 2
+    2300006: Art 3
+    2300008: Blu-ray
+    2300010: Bonsai
+    2300012: Bonsai 2
+    2300014: Book 1
+    2300016: Book 10
+    2300018: Book 11
+    2300020: Book 2
+    2300022: Book 3
+    2300024: Book 4
+    2300026: Book 5
+    2300028: Book 6
+    2300030: Book 7
+    2300032: Book 8
+    2300034: Book 9
+    2300036: Control
+    2300038: Corneta
+    2300040: Lampara
+    2300042: Mesa
+    2300044: Mesa 2
+    2300046: Obiect 1
+    2300048: Object 2
+    2300050: Object 3
+    2300052: Room
+    2300054: Sofa
+    2300056: Table 1
+    2300058: Table 2
+    2300060: Table 3
+    2300062: TV1
+    2300064: Window
+    3300000: Alfombra
+    3300002: Art 1
+    3300004: Art 2
+    3300006: Art 3
+    3300008: Blu-ray
+    3300010: Bonsai
+    3300012: Bonsai 2
+    3300014: Book 1
+    3300016: Book 10
+    3300018: Book 11
+    3300020: Book 2
+    3300022: Book 3
+    3300024: Book 4
+    3300026: Book 5
+    3300028: Book 6
+    3300030: Book 7
+    3300032: Book 8
+    3300034: Book 9
+    3300036: Control
+    3300038: Corneta
+    3300040: Lampara
+    3300042: Mesa
+    3300044: Mesa 2
+    3300046: Obiect 1
+    3300048: Object 2
+    3300050: Object 3
+    3300052: Room
+    3300054: Sofa
+    3300056: Table 1
+    3300058: Table 2
+    3300060: Table 3
+    3300062: TV1
+    3300064: Window
+    4300000: Lampara
+    4300002: Obiect 1
+    4300004: Object 2
+    4300006: Object 3
+    4300008: Control
+    4300010: Bonsai
+    4300012: Mesa 2
+    4300014: Alfombra
+    4300016: Sofa
+    4300018: Blu-ray
+    4300020: Corneta
+    4300022: Mesa
+    4300024: Art 2
+    4300026: Art 3
+    4300028: Art 1
+    4300030: Bonsai 2
+    4300032: Book 2
+    4300034: Book 1
+    4300036: Book 3
+    4300038: Book 4
+    4300040: Book 5
+    4300042: Book 6
+    4300044: Book 7
+    4300046: Book 8
+    4300048: Book 9
+    4300050: Book 10
+    4300052: Table 1
+    4300054: Table 2
+    4300056: Table 3
+    4300058: Window
+    4300060: Room
+    4300062: Book 11
+    4300064: TV1
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bed
+    second: {fileID: 2100000, guid: b5aa21678fe15eb418ac0a6e168d96ae, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Black.001
+    second: {fileID: 2100000, guid: c222625642651aa4d864e83ba0751473, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blue Book
+    second: {fileID: 2100000, guid: 1a3e97a72b8b27a44b062421e68badac, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brown
+    second: {fileID: 2100000, guid: 62b54f8b2eb2c5e479f9cffd2d829145, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Green
+    second: {fileID: 2100000, guid: 856b131e72eec104cadb2c374749dd6b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Green 2
+    second: {fileID: 2100000, guid: 8c5b32f3cd3fc714e9b45eee0cbfef6c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Grey 2
+    second: {fileID: 2100000, guid: ec3d66c868f255d4d974429083f87c5e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Orange
+    second: {fileID: 2100000, guid: d876d6165a6cb9146b6db87c31395323, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Red Book
+    second: {fileID: 2100000, guid: f6f61a9b0a9fd3c409b290410effc35d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: White
+    second: {fileID: 2100000, guid: 49403a7f22ff99e4ca70d47be5a63114, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood
+    second: {fileID: 2100000, guid: a2328e3d7d5a8084589eedf665dc0c66, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood 3
+    second: {fileID: 2100000, guid: 9bdcb67c1483a08469a1ba28d9ea5f41, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Yelllow Book
+    second: {fileID: 2100000, guid: d5a84220cf353e742ae31db2b6c8beff, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,412 @@
+fileFormatVersion: 2
+guid: 7618e993b573b1248af52bb2c74693c1
+timeCreated: 1521966956
+licenseType: Store
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Art 1
+    100002: Art 2
+    100004: Art 3
+    100006: Art 4
+    100008: Art 5
+    100010: Art 6
+    100012: Art 7
+    100014: //RootNode
+    100016: Ball 1
+    100018: Ball 2
+    100020: Ball 3
+    100022: Ball V1
+    100024: Ball V2
+    100026: Ball V3
+    100028: Ballons 1
+    100030: Ballons 2
+    100032: Ballons 3
+    100034: Ballons 4
+    100036: Book 1
+    100038: Book 2
+    100040: Book 3
+    100042: Book 4
+    100044: Book 5
+    100046: Colors
+    100048: Cube
+    100050: Cube 1
+    100052: Cube 10
+    100054: Cube 11
+    100056: Cube 2
+    100058: Cube 3
+    100060: Cube 4
+    100062: Cube 5
+    100064: Cube 6
+    100066: Cube 7
+    100068: Cube 8
+    100070: Cube 9
+    100072: Cuna
+    100074: Flowers
+    100076: Gabinete
+    100078: Lampara
+    100080: Mueble
+    100082: Repisa
+    100084: Sofa
+    100086: Tricycle
+    100088: Window
+    400000: Art 1
+    400002: Art 2
+    400004: Art 3
+    400006: Art 4
+    400008: Art 5
+    400010: Art 6
+    400012: Art 7
+    400014: //RootNode
+    400016: Ball 1
+    400018: Ball 2
+    400020: Ball 3
+    400022: Ball V1
+    400024: Ball V2
+    400026: Ball V3
+    400028: Ballons 1
+    400030: Ballons 2
+    400032: Ballons 3
+    400034: Ballons 4
+    400036: Book 1
+    400038: Book 2
+    400040: Book 3
+    400042: Book 4
+    400044: Book 5
+    400046: Colors
+    400048: Cube
+    400050: Cube 1
+    400052: Cube 10
+    400054: Cube 11
+    400056: Cube 2
+    400058: Cube 3
+    400060: Cube 4
+    400062: Cube 5
+    400064: Cube 6
+    400066: Cube 7
+    400068: Cube 8
+    400070: Cube 9
+    400072: Cuna
+    400074: Flowers
+    400076: Gabinete
+    400078: Lampara
+    400080: Mueble
+    400082: Repisa
+    400084: Sofa
+    400086: Tricycle
+    400088: Window
+    2300000: Art 1
+    2300002: Art 2
+    2300004: Art 3
+    2300006: Art 4
+    2300008: Art 5
+    2300010: Art 6
+    2300012: Art 7
+    2300014: Ball 1
+    2300016: Ball 2
+    2300018: Ball 3
+    2300020: Ball V1
+    2300022: Ball V2
+    2300024: Ball V3
+    2300026: Ballons 1
+    2300028: Ballons 2
+    2300030: Ballons 3
+    2300032: Ballons 4
+    2300034: Book 1
+    2300036: Book 2
+    2300038: Book 3
+    2300040: Book 4
+    2300042: Book 5
+    2300044: Colors
+    2300046: Cube
+    2300048: Cube 1
+    2300050: Cube 10
+    2300052: Cube 11
+    2300054: Cube 2
+    2300056: Cube 3
+    2300058: Cube 4
+    2300060: Cube 5
+    2300062: Cube 6
+    2300064: Cube 7
+    2300066: Cube 8
+    2300068: Cube 9
+    2300070: Cuna
+    2300072: Flowers
+    2300074: Gabinete
+    2300076: Lampara
+    2300078: Mueble
+    2300080: Repisa
+    2300082: Sofa
+    2300084: Tricycle
+    2300086: Window
+    3300000: Art 1
+    3300002: Art 2
+    3300004: Art 3
+    3300006: Art 4
+    3300008: Art 5
+    3300010: Art 6
+    3300012: Art 7
+    3300014: Ball 1
+    3300016: Ball 2
+    3300018: Ball 3
+    3300020: Ball V1
+    3300022: Ball V2
+    3300024: Ball V3
+    3300026: Ballons 1
+    3300028: Ballons 2
+    3300030: Ballons 3
+    3300032: Ballons 4
+    3300034: Book 1
+    3300036: Book 2
+    3300038: Book 3
+    3300040: Book 4
+    3300042: Book 5
+    3300044: Colors
+    3300046: Cube
+    3300048: Cube 1
+    3300050: Cube 10
+    3300052: Cube 11
+    3300054: Cube 2
+    3300056: Cube 3
+    3300058: Cube 4
+    3300060: Cube 5
+    3300062: Cube 6
+    3300064: Cube 7
+    3300066: Cube 8
+    3300068: Cube 9
+    3300070: Cuna
+    3300072: Flowers
+    3300074: Gabinete
+    3300076: Lampara
+    3300078: Mueble
+    3300080: Repisa
+    3300082: Sofa
+    3300084: Tricycle
+    3300086: Window
+    4300000: Ball V3
+    4300002: Ball V2
+    4300004: Ballons 1
+    4300006: Ballons 2
+    4300008: Ballons 3
+    4300010: Ballons 4
+    4300012: Ball 1
+    4300014: Ball V1
+    4300016: Ball 3
+    4300018: Ball 2
+    4300020: Cube 5
+    4300022: Cube 10
+    4300024: Cube 11
+    4300026: Cube 8
+    4300028: Cube 7
+    4300030: Cube 9
+    4300032: Cube 6
+    4300034: Tricycle
+    4300036: Colors
+    4300038: Cuna
+    4300040: Flowers
+    4300042: Book 1
+    4300044: Gabinete
+    4300046: Lampara
+    4300048: Mueble
+    4300050: Cube 1
+    4300052: Cube 2
+    4300054: Cube 4
+    4300056: Cube 3
+    4300058: Book 5
+    4300060: Book 3
+    4300062: Book 4
+    4300064: Art 1
+    4300066: Art 2
+    4300068: Art 3
+    4300070: Window
+    4300072: Art 4
+    4300074: Art 5
+    4300076: Art 7
+    4300078: Art 6
+    4300080: Repisa
+    4300082: Book 2
+    4300084: Cube
+    4300086: Sofa
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 1 Red 2
+    second: {fileID: 2100000, guid: 7b6132a48b09eba44b995e0b6a5ef223, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Beige
+    second: {fileID: 2100000, guid: 5d50b67f87a6f5248b19f40973980b7c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Beige 2
+    second: {fileID: 2100000, guid: 275ec40f125b36844a76a56ac9fb8ecc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Black
+    second: {fileID: 2100000, guid: a1cc0885c7fd5d3499d8f0ea4dfed238, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blue
+    second: {fileID: 2100000, guid: ce8c2ad68e877f84599b5de514e4da17, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blue 2
+    second: {fileID: 2100000, guid: 978766e982b340b47a50a0e830d4a507, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blue 4
+    second: {fileID: 2100000, guid: ac22c747ae4236d4b8931b90cf07e559, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blue 5
+    second: {fileID: 2100000, guid: 650be3d16bed5ea43b64bd63ecfb6b87, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blue 6
+    second: {fileID: 2100000, guid: 881b07bfe0bc17a42ab22e425aee9e57, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brown
+    second: {fileID: 2100000, guid: 62b54f8b2eb2c5e479f9cffd2d829145, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Green
+    second: {fileID: 2100000, guid: 9ab111e955a928240bff8467869215d8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Green2
+    second: {fileID: 2100000, guid: 07e951d07a950c741887a4abfcb501ba, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Grey
+    second: {fileID: 2100000, guid: b6644824ce9bdc24ca7f27cd5720a3ca, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Leaves
+    second: {fileID: 2100000, guid: d8c5ec1e899e2d643aacb17fa5a69418, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.101
+    second: {fileID: 2100000, guid: 39b3e51495e8d1c4a9aeced1fd92b648, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.228
+    second: {fileID: 2100000, guid: bc22dd375e01618458fc1b653cb64977, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plant
+    second: {fileID: 2100000, guid: 6c3fedda003c4934681b726974932f00, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Red
+    second: {fileID: 2100000, guid: 5b507c83fee26324da1b1d878d4499d3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Violet
+    second: {fileID: 2100000, guid: fdfbea9280cd88d46ab88488bfcf7a6a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: White
+    second: {fileID: 2100000, guid: 49403a7f22ff99e4ca70d47be5a63114, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Yellow
+    second: {fileID: 2100000, guid: bc6d6cf56532b52449e9509c9de73386, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,712 @@
+fileFormatVersion: 2
+guid: 28eecd227ffd8ea44a7df45d113fdb71
+timeCreated: 1522004646
+licenseType: Store
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: 1
+    100002: 2
+    100004: Art
+    100006: Art.001
+    100008: Art.002
+    100010: Bed.001
+    100012: //RootNode
+    100014: Box 2
+    100016: Box 3
+    100018: Box 4
+    100020: Chair.001
+    100022: Closet
+    100024: Clothes 1
+    100026: Clothes 2
+    100028: Clothes 3
+    100030: Coffee
+    100032: Coffee.001
+    100034: Cook
+    100036: Cube
+    100038: Cube.001
+    100040: Cube.002
+    100042: Cube.003
+    100044: Cube.004
+    100046: Cube.006
+    100048: Cube.007
+    100050: Cube.008
+    100052: Cube.009
+    100054: Cube.011
+    100056: Cylinder
+    100058: Dirt Clothes
+    100060: Freezer
+    100062: Keyboard
+    100064: Keyboard.001
+    100066: Kitchen 1
+    100068: Kitchen 1.001
+    100070: Kitchen 1.003
+    100072: Kitchen 2
+    100074: Light.001
+    100076: Light.002
+    100078: Make Coffee
+    100080: Microwave
+    100082: Mouse
+    100084: Much Things
+    100086: Object 1
+    100088: Object 2
+    100090: Object 3
+    100092: Object 4
+    100094: Object 5
+    100096: Object 6
+    100098: Objects
+    100100: Others
+    100102: Others.001
+    100104: Others.002
+    100106: Others.003
+    100108: Others.004
+    100110: Others.005
+    100112: PC
+    100114: Shirt 1
+    100116: Shirt 2
+    100118: Shirt 3
+    100120: Shirt 4
+    100122: Shirt 5
+    100124: Soap
+    100126: Sofa
+    100128: Spray
+    100130: Trash.001
+    100132: TV 1
+    100134: TV 2
+    100136: TV1
+    100138: Wall Paint
+    100140: Wash
+    100142: Wash 2
+    100144: Watch
+    100146: Water
+    100148: Water.001
+    100150: Water.002
+    100152: Water.003
+    100154: Window.000
+    100156: Window.001
+    100158: Window.002
+    100160: Window.003
+    100162: Window.004
+    100164: Window.005
+    400000: 1
+    400002: 2
+    400004: Art
+    400006: Art.001
+    400008: Art.002
+    400010: Bed.001
+    400012: //RootNode
+    400014: Box 2
+    400016: Box 3
+    400018: Box 4
+    400020: Chair.001
+    400022: Closet
+    400024: Clothes 1
+    400026: Clothes 2
+    400028: Clothes 3
+    400030: Coffee
+    400032: Coffee.001
+    400034: Cook
+    400036: Cube
+    400038: Cube.001
+    400040: Cube.002
+    400042: Cube.003
+    400044: Cube.004
+    400046: Cube.006
+    400048: Cube.007
+    400050: Cube.008
+    400052: Cube.009
+    400054: Cube.011
+    400056: Cylinder
+    400058: Dirt Clothes
+    400060: Freezer
+    400062: Keyboard
+    400064: Keyboard.001
+    400066: Kitchen 1
+    400068: Kitchen 1.001
+    400070: Kitchen 1.003
+    400072: Kitchen 2
+    400074: Light.001
+    400076: Light.002
+    400078: Make Coffee
+    400080: Microwave
+    400082: Mouse
+    400084: Much Things
+    400086: Object 1
+    400088: Object 2
+    400090: Object 3
+    400092: Object 4
+    400094: Object 5
+    400096: Object 6
+    400098: Objects
+    400100: Others
+    400102: Others.001
+    400104: Others.002
+    400106: Others.003
+    400108: Others.004
+    400110: Others.005
+    400112: PC
+    400114: Shirt 1
+    400116: Shirt 2
+    400118: Shirt 3
+    400120: Shirt 4
+    400122: Shirt 5
+    400124: Soap
+    400126: Sofa
+    400128: Spray
+    400130: Trash.001
+    400132: TV 1
+    400134: TV 2
+    400136: TV1
+    400138: Wall Paint
+    400140: Wash
+    400142: Wash 2
+    400144: Watch
+    400146: Water
+    400148: Water.001
+    400150: Water.002
+    400152: Water.003
+    400154: Window.000
+    400156: Window.001
+    400158: Window.002
+    400160: Window.003
+    400162: Window.004
+    400164: Window.005
+    2300000: 1
+    2300002: 2
+    2300004: Art
+    2300006: Art.001
+    2300008: Art.002
+    2300010: Bed.001
+    2300012: Box 2
+    2300014: Box 3
+    2300016: Box 4
+    2300018: Chair.001
+    2300020: Closet
+    2300022: Clothes 1
+    2300024: Clothes 2
+    2300026: Clothes 3
+    2300028: Coffee
+    2300030: Coffee.001
+    2300032: Cook
+    2300034: Cube
+    2300036: Cube.001
+    2300038: Cube.002
+    2300040: Cube.003
+    2300042: Cube.004
+    2300044: Cube.006
+    2300046: Cube.007
+    2300048: Cube.008
+    2300050: Cube.009
+    2300052: Cube.011
+    2300054: Cylinder
+    2300056: Dirt Clothes
+    2300058: Freezer
+    2300060: Keyboard
+    2300062: Keyboard.001
+    2300064: Kitchen 1
+    2300066: Kitchen 1.001
+    2300068: Kitchen 1.003
+    2300070: Kitchen 2
+    2300072: Light.001
+    2300074: Light.002
+    2300076: Make Coffee
+    2300078: Microwave
+    2300080: Mouse
+    2300082: Much Things
+    2300084: Object 1
+    2300086: Object 2
+    2300088: Object 3
+    2300090: Object 4
+    2300092: Object 5
+    2300094: Object 6
+    2300096: Objects
+    2300098: Others
+    2300100: Others.001
+    2300102: Others.002
+    2300104: Others.003
+    2300106: Others.004
+    2300108: Others.005
+    2300110: PC
+    2300112: Shirt 1
+    2300114: Shirt 2
+    2300116: Shirt 3
+    2300118: Shirt 4
+    2300120: Shirt 5
+    2300122: Soap
+    2300124: Sofa
+    2300126: Spray
+    2300128: Trash.001
+    2300130: TV 1
+    2300132: TV 2
+    2300134: TV1
+    2300136: Wall Paint
+    2300138: Wash
+    2300140: Wash 2
+    2300142: Watch
+    2300144: Water
+    2300146: Water.001
+    2300148: Water.002
+    2300150: Water.003
+    2300152: Window.000
+    2300154: Window.001
+    2300156: Window.002
+    2300158: Window.003
+    2300160: Window.004
+    2300162: Window.005
+    3300000: 1
+    3300002: 2
+    3300004: Art
+    3300006: Art.001
+    3300008: Art.002
+    3300010: Bed.001
+    3300012: Box 2
+    3300014: Box 3
+    3300016: Box 4
+    3300018: Chair.001
+    3300020: Closet
+    3300022: Clothes 1
+    3300024: Clothes 2
+    3300026: Clothes 3
+    3300028: Coffee
+    3300030: Coffee.001
+    3300032: Cook
+    3300034: Cube
+    3300036: Cube.001
+    3300038: Cube.002
+    3300040: Cube.003
+    3300042: Cube.004
+    3300044: Cube.006
+    3300046: Cube.007
+    3300048: Cube.008
+    3300050: Cube.009
+    3300052: Cube.011
+    3300054: Cylinder
+    3300056: Dirt Clothes
+    3300058: Freezer
+    3300060: Keyboard
+    3300062: Keyboard.001
+    3300064: Kitchen 1
+    3300066: Kitchen 1.001
+    3300068: Kitchen 1.003
+    3300070: Kitchen 2
+    3300072: Light.001
+    3300074: Light.002
+    3300076: Make Coffee
+    3300078: Microwave
+    3300080: Mouse
+    3300082: Much Things
+    3300084: Object 1
+    3300086: Object 2
+    3300088: Object 3
+    3300090: Object 4
+    3300092: Object 5
+    3300094: Object 6
+    3300096: Objects
+    3300098: Others
+    3300100: Others.001
+    3300102: Others.002
+    3300104: Others.003
+    3300106: Others.004
+    3300108: Others.005
+    3300110: PC
+    3300112: Shirt 1
+    3300114: Shirt 2
+    3300116: Shirt 3
+    3300118: Shirt 4
+    3300120: Shirt 5
+    3300122: Soap
+    3300124: Sofa
+    3300126: Spray
+    3300128: Trash.001
+    3300130: TV 1
+    3300132: TV 2
+    3300134: TV1
+    3300136: Wall Paint
+    3300138: Wash
+    3300140: Wash 2
+    3300142: Watch
+    3300144: Water
+    3300146: Water.001
+    3300148: Water.002
+    3300150: Water.003
+    3300152: Window.000
+    3300154: Window.001
+    3300156: Window.002
+    3300158: Window.003
+    3300160: Window.004
+    3300162: Window.005
+    4300000: Kitchen 1.003
+    4300002: Window.005
+    4300004: Window.004
+    4300006: Window.003
+    4300008: Window.000
+    4300010: Window.002
+    4300012: Cube.011
+    4300014: Cube.009
+    4300016: Cube.008
+    4300018: Cube.001
+    4300020: Cube.007
+    4300022: Cube.006
+    4300024: TV1
+    4300026: Keyboard.001
+    4300028: Cube.004
+    4300030: Cube.003
+    4300032: Cube.002
+    4300034: Cube
+    4300036: Cylinder
+    4300038: Water.003
+    4300040: Kitchen 1.001
+    4300042: Art.001
+    4300044: Art.002
+    4300046: Art
+    4300048: Light.001
+    4300050: Light.002
+    4300052: Others.001
+    4300054: Others.002
+    4300056: Others.003
+    4300058: Others.004
+    4300060: Others.005
+    4300062: Others
+    4300064: Sofa
+    4300066: Water.001
+    4300068: Water.002
+    4300070: Water
+    4300072: Bed.001
+    4300074: Chair.001
+    4300076: Coffee
+    4300078: Keyboard
+    4300080: Mouse
+    4300082: Objects
+    4300084: PC
+    4300086: TV 1
+    4300088: TV 2
+    4300090: Wall Paint
+    4300092: Watch
+    4300094: Window.001
+    4300096: 1
+    4300098: 2
+    4300100: Coffee.001
+    4300102: Cook
+    4300104: Freezer
+    4300106: Kitchen 1
+    4300108: Kitchen 2
+    4300110: Make Coffee
+    4300112: Microwave
+    4300114: Box 2
+    4300116: Box 3
+    4300118: Box 4
+    4300120: Closet
+    4300122: Clothes 1
+    4300124: Clothes 2
+    4300126: Clothes 3
+    4300128: Dirt Clothes
+    4300130: Much Things
+    4300132: Object 1
+    4300134: Object 2
+    4300136: Object 3
+    4300138: Object 4
+    4300140: Object 5
+    4300142: Object 6
+    4300144: Shirt 1
+    4300146: Shirt 2
+    4300148: Shirt 3
+    4300150: Shirt 4
+    4300152: Shirt 5
+    4300154: Soap
+    4300156: Spray
+    4300158: Trash.001
+    4300160: Wash
+    4300162: Wash 2
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Beige
+    second: {fileID: 2100000, guid: 5d50b67f87a6f5248b19f40973980b7c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Black
+    second: {fileID: 2100000, guid: 98de17e3db7d0f3429cccf60714fbe72, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Black.001
+    second: {fileID: 2100000, guid: ed44934c70750a44b976d98ff929f9c2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Black.002
+    second: {fileID: 2100000, guid: e205dfe57e4e5bd4ab50aa0ef0182b42, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blue
+    second: {fileID: 2100000, guid: 491383a6c97553b4085e54e5f5d0557d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blue 2
+    second: {fileID: 2100000, guid: dad70288e1506554b8eff8a04698276b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blue 2.001
+    second: {fileID: 2100000, guid: 116ac873f31496e45ae68a858f62b4ed, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blue 2.002
+    second: {fileID: 2100000, guid: 2e8af53b01b0b8b4e86414180d49995f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blue 3
+    second: {fileID: 2100000, guid: e076abf7b5838744792e4a6ac9cd7eaf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blue 3.001
+    second: {fileID: 2100000, guid: 1fccf6d481e5bf24aa64ded8d8901c0a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blue 4
+    second: {fileID: 2100000, guid: fafaf1923e8bc804ea322f59f4b35aab, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blue.001
+    second: {fileID: 2100000, guid: e279307e6b70f914f963ce3144d334db, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blue.002
+    second: {fileID: 2100000, guid: 3d408d2e39a0b2549997fc80addc5e9e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brown.001
+    second: {fileID: 2100000, guid: 56b69020e2048d543ba312fa2c78be95, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brown.002
+    second: {fileID: 2100000, guid: d0edcd4166937734a9e196322213b8b4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dark
+    second: {fileID: 2100000, guid: a312fa10920bfeb478041e3b92a25a29, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Floor
+    second: {fileID: 2100000, guid: 5ae9cb055ab85034ead26e5f15178c8b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Green 1
+    second: {fileID: 2100000, guid: c9d91c1edcf2105439fdffbb14a82bf1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Green 2
+    second: {fileID: 2100000, guid: 8c5b32f3cd3fc714e9b45eee0cbfef6c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Green 3
+    second: {fileID: 2100000, guid: a97da001ad4c03c40a4ffbe5810d2a1f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Grey
+    second: {fileID: 2100000, guid: b6644824ce9bdc24ca7f27cd5720a3ca, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Grey 1
+    second: {fileID: 2100000, guid: 6d5dcdd08cbcd964d81fdcbd39c941ac, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Grey 2
+    second: {fileID: 2100000, guid: ec3d66c868f255d4d974429083f87c5e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Grey 2.001
+    second: {fileID: 2100000, guid: ad3199e291938484295e3a27eec6536e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Grey 3
+    second: {fileID: 2100000, guid: af5e30a62740ee646b4e9c518cc1cf93, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Laptop
+    second: {fileID: 2100000, guid: ec5c4454b4125e94e9bc9741a8a958c7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mustard
+    second: {fileID: 2100000, guid: e03d7cfe062373f4a817b33c0e6a14a0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plate
+    second: {fileID: 2100000, guid: e5be46b4a294094469f30bece4e073f1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plate.001
+    second: {fileID: 2100000, guid: 48539c3b3b3184441be8c5b88d500c54, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Red
+    second: {fileID: 2100000, guid: 5b507c83fee26324da1b1d878d4499d3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Red Book.001
+    second: {fileID: 2100000, guid: 30f9cad2e0561f441be1ff084f96ce85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rose
+    second: {fileID: 2100000, guid: d4e886e62442ee6409b0078188f20f9c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Violet
+    second: {fileID: 2100000, guid: fdfbea9280cd88d46ab88488bfcf7a6a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: White 2
+    second: {fileID: 2100000, guid: 36c0126a7b07cab4a95018d12e7b4150, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: White.001
+    second: {fileID: 2100000, guid: 13ca245c48980c8468cf355affb5e8e0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: White.002
+    second: {fileID: 2100000, guid: 5202a08da2ad938429a804f24f0cea0b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: White.003
+    second: {fileID: 2100000, guid: 30e38d7b3f5516d429e30eeab938999a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: White.004
+    second: {fileID: 2100000, guid: 9a67e531a7e1c1545b4b8ee932c78fc1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood.001
+    second: {fileID: 2100000, guid: 704a4f64be9274e43b042b905b816dfa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood.002
+    second: {fileID: 2100000, guid: 0116f2a1d086d0a42bb5373ad4077f31, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Yellow
+    second: {fileID: 2100000, guid: bc6d6cf56532b52449e9509c9de73386, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Yellow.001
+    second: {fileID: 2100000, guid: 6dd4bd2bdcb8ca64aac2f07daf2303db, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: grey
+    second: {fileID: 2100000, guid: b6644824ce9bdc24ca7f27cd5720a3ca, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

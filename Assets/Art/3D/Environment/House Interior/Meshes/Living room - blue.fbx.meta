@@ -1,0 +1,257 @@
+fileFormatVersion: 2
+guid: d5f53cbf995306d4c875520262788186
+timeCreated: 1521966957
+licenseType: Store
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Art
+    100002: Art.001
+    100004: Art.002
+    100006: //RootNode
+    100008: Light.001
+    100010: Light.002
+    100012: Others
+    100014: Others.001
+    100016: Others.002
+    100018: Others.003
+    100020: Others.004
+    100022: Others.005
+    100024: Room
+    100026: Scene
+    100028: Sofa
+    100030: Water
+    100032: Water.001
+    100034: Water.002
+    100036: Windows
+    400000: Art
+    400002: Art.001
+    400004: Art.002
+    400006: //RootNode
+    400008: Light.001
+    400010: Light.002
+    400012: Others
+    400014: Others.001
+    400016: Others.002
+    400018: Others.003
+    400020: Others.004
+    400022: Others.005
+    400024: Room
+    400026: Scene
+    400028: Sofa
+    400030: Water
+    400032: Water.001
+    400034: Water.002
+    400036: Windows
+    2300000: Art
+    2300002: Art.001
+    2300004: Art.002
+    2300006: Light.001
+    2300008: Light.002
+    2300010: Others
+    2300012: Others.001
+    2300014: Others.002
+    2300016: Others.003
+    2300018: Others.004
+    2300020: Others.005
+    2300022: Room
+    2300024: Scene
+    2300026: Sofa
+    2300028: Water
+    2300030: Water.001
+    2300032: Water.002
+    2300034: Windows
+    3300000: Art
+    3300002: Art.001
+    3300004: Art.002
+    3300006: Light.001
+    3300008: Light.002
+    3300010: Others
+    3300012: Others.001
+    3300014: Others.002
+    3300016: Others.003
+    3300018: Others.004
+    3300020: Others.005
+    3300022: Room
+    3300024: Scene
+    3300026: Sofa
+    3300028: Water
+    3300030: Water.001
+    3300032: Water.002
+    3300034: Windows
+    4300000: Others.005
+    4300002: Art.002
+    4300004: Art.001
+    4300006: Light.002
+    4300008: Light.001
+    4300010: Others.004
+    4300012: Others.003
+    4300014: Others.002
+    4300016: Others.001
+    4300018: Water.002
+    4300020: Water.001
+    4300022: Art
+    4300024: Sofa
+    4300026: Water
+    4300028: Others
+    4300030: Windows
+    4300032: Room
+    4300034: Scene
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Black
+    second: {fileID: 2100000, guid: a1cc0885c7fd5d3499d8f0ea4dfed238, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blue
+    second: {fileID: 2100000, guid: ce8c2ad68e877f84599b5de514e4da17, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blue 2
+    second: {fileID: 2100000, guid: 978766e982b340b47a50a0e830d4a507, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blue 3
+    second: {fileID: 2100000, guid: c7183a928279b664a9cbd2b61bbcf217, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brown
+    second: {fileID: 2100000, guid: 62b54f8b2eb2c5e479f9cffd2d829145, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Floor
+    second: {fileID: 2100000, guid: 5ae9cb055ab85034ead26e5f15178c8b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Laptop
+    second: {fileID: 2100000, guid: ec5c4454b4125e94e9bc9741a8a958c7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mustard
+    second: {fileID: 2100000, guid: e03d7cfe062373f4a817b33c0e6a14a0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Orange
+    second: {fileID: 2100000, guid: d876d6165a6cb9146b6db87c31395323, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Red Book
+    second: {fileID: 2100000, guid: f6f61a9b0a9fd3c409b290410effc35d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sofa
+    second: {fileID: 2100000, guid: 1d71641ee65ea334c8eaf77e92f065cd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Symbol
+    second: {fileID: 2100000, guid: 6fd18994ee405694b94cc4ef9a7b1d36, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: White
+    second: {fileID: 2100000, guid: 49403a7f22ff99e4ca70d47be5a63114, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: White.001
+    second: {fileID: 2100000, guid: 13ca245c48980c8468cf355affb5e8e0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood
+    second: {fileID: 2100000, guid: a2328e3d7d5a8084589eedf665dc0c66, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Yellow
+    second: {fileID: 2100000, guid: bc6d6cf56532b52449e9509c9de73386, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
