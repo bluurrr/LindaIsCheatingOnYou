@@ -262,6 +262,8 @@ GameObject:
   - component: {fileID: 5641387577899878884}
   - component: {fileID: 5641387577899878887}
   - component: {fileID: 5641387577899878886}
+  - component: {fileID: 1367690081177187021}
+  - component: {fileID: 3754287403226285102}
   m_Layer: 8
   m_Name: PlayerBase
   m_TagString: Untagged
@@ -548,6 +550,87 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &1367690081177187021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5642474205120641214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a70e525c82ce9413fa4d940ad7fcf1db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fixTransforms: 1
+  references:
+    root: {fileID: 5645933110277429874}
+    pelvis: {fileID: 0}
+    leftThigh: {fileID: 0}
+    leftCalf: {fileID: 0}
+    leftFoot: {fileID: 0}
+    rightThigh: {fileID: 0}
+    rightCalf: {fileID: 0}
+    rightFoot: {fileID: 0}
+    leftUpperArm: {fileID: 0}
+    leftForearm: {fileID: 0}
+    leftHand: {fileID: 0}
+    rightUpperArm: {fileID: 0}
+    rightForearm: {fileID: 0}
+    rightHand: {fileID: 0}
+    head: {fileID: 0}
+    spine: []
+    eyes: []
+  solver:
+    IKPosition: {x: 0, y: 0, z: 0}
+    IKPositionWeight: 1
+    root: {fileID: 0}
+    iterations: 4
+    chain: []
+    effectors: []
+    spineMapping:
+      spineBones: []
+      leftUpperArmBone: {fileID: 0}
+      rightUpperArmBone: {fileID: 0}
+      leftThighBone: {fileID: 0}
+      rightThighBone: {fileID: 0}
+      iterations: 3
+      twistWeight: 1
+    boneMappings: []
+    limbMappings: []
+    FABRIKPass: 1
+    rootNode: {fileID: 0}
+    spineStiffness: 0.5
+    pullBodyVertical: 0.5
+    pullBodyHorizontal: 0
+--- !u!114 &3754287403226285102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5642474205120641214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 537b81dc57e504256a6c74c4bcf6bca9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetTag: 
+  fadeInTime: 0.3
+  speed: 1
+  resetToDefaultsSpeed: 1
+  characterCollider: {fileID: 0}
+  FPSCamera: {fileID: 0}
+  camRaycastLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  camRaycastDistance: 1
+  fullBody: {fileID: 0}
+  lookAt:
+    ik: {fileID: 0}
+    lerpSpeed: 5
+    weightSpeed: 1
+    isPaused: 0
 --- !u!1 &7728951410761357096
 GameObject:
   m_ObjectHideFlags: 0
