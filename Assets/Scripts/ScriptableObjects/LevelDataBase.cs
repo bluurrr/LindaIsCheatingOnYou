@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "LevelManager", menuName = "ScriptableObjects/LevelManager")]
-public class LevelManager : ScriptableObject
+[CreateAssetMenu(fileName = "LevelDataBase", menuName = "ScriptableObjects/LevelDataBase")]
+public class LevelDataBase : ScriptableObject
 {
     public LevelData[] allLevels; 
 

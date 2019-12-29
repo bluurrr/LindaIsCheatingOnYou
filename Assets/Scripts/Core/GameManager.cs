@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public Transform mapSpawn;
     public ActionDataBank actionDataBank;
-    public LevelManager levelManager;
+    public LevelDataBase levelManager;
     public PlayersManager playerManager;
     private LevelData currentLevel; 
 
