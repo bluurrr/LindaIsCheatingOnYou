@@ -42,7 +42,29 @@ public class IKAnimationManager : MonoBehaviour
                 fullBodyBipedIK.solver.bodyEffector.target = obj;
             break;  
         }
-        fullBodyBipedIK.solver.leftHandEffector.target = obj; 
+    }
+
+    public void ClearIKTarget(InteractionTarget interactionTarget)
+    {
+        switch(interactionTarget.effectorType)
+        {
+            case RootMotion.FinalIK.FullBodyBipedEffector.RightHand:
+                fullBodyBipedIK.solver.rightHandEffector.target = null;
+            break;
+            case RootMotion.FinalIK.FullBodyBipedEffector.LeftHand:
+                fullBodyBipedIK.solver.leftHandEffector.target = null;
+            break;
+            case RootMotion.FinalIK.FullBodyBipedEffector.Body:
+                fullBodyBipedIK.solver.bodyEffector.target = null;
+            break;  
+        }
+    }
+
+    public void ClearAllIKTargets()
+    {
+        fullBodyBipedIK.solver.rightHandEffector.target = null;
+        fullBodyBipedIK.solver.leftHandEffector.target = null;
+        fullBodyBipedIK.solver.bodyEffector.target = null;
     }
 
 }

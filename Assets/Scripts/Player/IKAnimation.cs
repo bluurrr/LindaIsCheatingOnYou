@@ -25,13 +25,16 @@ public class IKAnimation : MonoBehaviour
             }
         }  
     }
-    public void Play()
+    public void Play(IKAnimationManager iKAnimManager)
     {
-        Pin();
+        Pin(iKAnimManager);
     }
 
-    private void Pin()
+    private void Pin(IKAnimationManager iKAnimManager)
     {
-
+        foreach(InteractionTargetID interactionTarget in pinnedTargets)
+        {
+            iKAnimManager.AssignIKTarget(interactionTarget.interactionTarget, iKAnimManager.GetIKPoint(interactionTarget.attachmentID.ToString())); 
+        }
     }
 }

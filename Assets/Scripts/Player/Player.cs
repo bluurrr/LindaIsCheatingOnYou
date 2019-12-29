@@ -16,6 +16,7 @@ namespace PlayerComponents
         public Selector selector;
         public NavMeshAgent agent;
         public IKAnimationManager iKAnimationManager;
+    
         private void Awake()
         {
             animManager.Init();
