@@ -4,15 +4,25 @@ using UnityEngine;
 
 public class IKAnimationManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject ModelRoot; 
+    private Dictionary<string, Transform> IKPoints =  new Dictionary<string, Transform>();
+
+    public void Init()
     {
-        
+        IKPoint[] ikPoints = ModelRoot.GetComponentsInChildren<IKPoint>();
+        foreach(IKPoint point in ikPoints)
+        {
+            IKPoints.Add(point.iD.ToString(), point.transform);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public Transform GetIKPoint(string key)
     {
-        
+        if(IKPoints.ContainsKey(key))
+        {
+            return IKPoints[key];
+        }
+        return null;
     }
+
 }

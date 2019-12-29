@@ -540,6 +540,7 @@ MonoBehaviour:
   target: 1
   interactionTarget: {fileID: 3117841585004685275}
   attachmentID: 1
+  animationType: 0
 --- !u!1 &311308888338643698
 GameObject:
   m_ObjectHideFlags: 0
@@ -671,6 +672,7 @@ MonoBehaviour:
   target: 0
   interactionTarget: {fileID: 2391484501805947591}
   attachmentID: 2
+  animationType: 2
 --- !u!1 &706780131922370953
 GameObject:
   m_ObjectHideFlags: 0
@@ -3553,6 +3555,7 @@ MonoBehaviour:
   target: 1
   interactionTarget: {fileID: 5081515798164869639}
   attachmentID: 0
+  animationType: 0
 --- !u!1 &5265445514480634808
 GameObject:
   m_ObjectHideFlags: 0

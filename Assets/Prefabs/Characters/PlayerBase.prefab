@@ -356,6 +356,7 @@ GameObject:
   - component: {fileID: 1367690081177187021}
   - component: {fileID: 3754287403226285102}
   - component: {fileID: -8940124129124880075}
+  - component: {fileID: 2673720925491939110}
   m_Layer: 8
   m_Name: PlayerBase
   m_TagString: Untagged
@@ -541,9 +542,7 @@ MonoBehaviour:
     rightForearm: {fileID: 0}
     rightHand: {fileID: 0}
     head: {fileID: 0}
-    spine:
-    - {fileID: 0}
-    - {fileID: 0}
+    spine: []
     eyes: []
   solver:
     IKPosition: {x: 0, y: 0, z: 0}
@@ -1012,6 +1011,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactionObject: {fileID: 0}
   effectors: 00000000
+--- !u!114 &2673720925491939110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5642474205120641214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c81da5f1ccfeb54da3f1f452dc02427, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7728951410761357096
 GameObject:
   m_ObjectHideFlags: 0

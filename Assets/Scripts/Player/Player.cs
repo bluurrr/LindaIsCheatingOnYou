@@ -15,9 +15,11 @@ namespace PlayerComponents
         public LineOfSight lineOfSight;
         public Selector selector;
         public NavMeshAgent agent;
+        public IKAnimationManager iKAnimationManager;
         private void Awake()
         {
             animManager.Init();
+            iKAnimationManager.Init();
         }
         private void Update()
         {

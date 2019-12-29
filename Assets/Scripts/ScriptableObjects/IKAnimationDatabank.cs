@@ -5,6 +5,5 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "IKAnimationDataBase", menuName = "ScriptableObjects/IKAnimationDataBase")]
 public class IKAnimationDatabank : ScriptableObject
 {
-    public IKAnimation[] IKAnimations; 
-
+    public IKAnimationDataBaseObject[] IKAnimations; 
 }

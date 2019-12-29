@@ -411,8 +411,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8230359044246278634}
-  - component: {fileID: 8515007398868900990}
   - component: {fileID: 8972538756575682915}
+  - component: {fileID: 8515007398868900990}
   m_Layer: 8
   m_Name: Body
   m_TagString: Untagged
@@ -437,21 +437,6 @@ Transform:
   m_Father: {fileID: 7456789681230374372}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8515007398868900990
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 830191656875474917}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dffe23209bffacb4dbad6e1ef649f2a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: 0
-  interactionTarget: {fileID: 8972538756575682915}
-  attachmentID: 2
 --- !u!114 &8972538756575682915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -472,6 +457,21 @@ MonoBehaviour:
   twistWeight: 1
   swingWeight: 0
   rotateOnce: 1
+--- !u!114 &8515007398868900990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 830191656875474917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dffe23209bffacb4dbad6e1ef649f2a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionTarget: {fileID: 8972538756575682915}
+  attachmentID: 2
+  animationType: 2
 --- !u!1 &977113899249598034
 GameObject:
   m_ObjectHideFlags: 0
@@ -1108,9 +1108,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dffe23209bffacb4dbad6e1ef649f2a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: 1
   interactionTarget: {fileID: 7699611670356636578}
   attachmentID: 0
+  animationType: 0
 --- !u!1 &1869829799303447308
 GameObject:
   m_ObjectHideFlags: 0
@@ -4050,9 +4050,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dffe23209bffacb4dbad6e1ef649f2a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: 1
   interactionTarget: {fileID: 7397814808500854875}
-  attachmentID: 0
+  attachmentID: 1
+  animationType: 0
 --- !u!1 &5654443239630610246
 GameObject:
   m_ObjectHideFlags: 0
