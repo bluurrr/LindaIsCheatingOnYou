@@ -5839,6 +5839,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5038396542075067916}
   - component: {fileID: 8669641123429656450}
+  - component: {fileID: 3124458231220345610}
   m_Layer: 0
   m_Name: Hug_InteractionObject
   m_TagString: Untagged
@@ -6006,6 +6007,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &3124458231220345610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7510734063340535296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3c45f3ce5fc00242a81ade8cd7cac9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7619202499819951879
 GameObject:
   m_ObjectHideFlags: 0
