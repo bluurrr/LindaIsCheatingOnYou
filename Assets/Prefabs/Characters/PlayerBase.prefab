@@ -357,6 +357,10 @@ GameObject:
   - component: {fileID: 3754287403226285102}
   - component: {fileID: -8940124129124880075}
   - component: {fileID: 2673720925491939110}
+  - component: {fileID: 8578410700690839605}
+  - component: {fileID: 6738640671877882461}
+  - component: {fileID: 2049066471533914099}
+  - component: {fileID: 4904817698472874447}
   m_Layer: 8
   m_Name: PlayerBase
   m_TagString: Untagged
@@ -421,6 +425,7 @@ MonoBehaviour:
   lineOfSight: {fileID: 5641387577899878884}
   selector: {fileID: 5641387577899878887}
   agent: {fileID: 5641387577899878886}
+  iKAnimationManager: {fileID: 2673720925491939110}
 --- !u!114 &5409500382845377186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1004,7 +1009,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5642474205120641214}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8cc0304f5a703416ebff81ad105ddf18, type: 3}
   m_Name: 
@@ -1023,6 +1028,100 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c81da5f1ccfeb54da3f1f452dc02427, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ModelRoot: {fileID: 0}
+  fullBodyBipedIK: {fileID: 1367690081177187021}
+--- !u!114 &8578410700690839605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5642474205120641214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d94300dc9c426484d99b0bcbb0708855, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  input: 4
+  Axis_IsOne:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8578410700690839605}
+        m_MethodName: test
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  Axis_IsZero:
+    m_PersistentCalls:
+      m_Calls: []
+  Axis_IsNegativeOne:
+    m_PersistentCalls:
+      m_Calls: []
+  inputTest: 0
+--- !u!114 &6738640671877882461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5642474205120641214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42a666529707c7b45a1a5f33d1dfa04d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  input: 0
+  buttonDown:
+    m_PersistentCalls:
+      m_Calls: []
+  button:
+    m_PersistentCalls:
+      m_Calls: []
+  buttonUp:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &2049066471533914099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5642474205120641214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42a666529707c7b45a1a5f33d1dfa04d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  input: 1
+  buttonDown:
+    m_PersistentCalls:
+      m_Calls: []
+  button:
+    m_PersistentCalls:
+      m_Calls: []
+  buttonUp:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &4904817698472874447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5642474205120641214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1407d101c687ead428afdb45e81b9b3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed_walk: 3
+  speed_run: 4
 --- !u!1 &7728951410761357096
 GameObject:
   m_ObjectHideFlags: 0
