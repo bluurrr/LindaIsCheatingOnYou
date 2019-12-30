@@ -29,7 +29,7 @@ public class Movement_XZ : MonoBehaviour
     }
 
 
-    int IsMoving()
+    public int IsMoving()
     {
         return (Input.GetAxis(AXIS_HORIZONTAL) != 0 || Input.GetAxis(AXIS_VERTICAL) != 0) ? 1 : 0;
     }

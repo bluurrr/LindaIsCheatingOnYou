@@ -8,8 +8,8 @@ namespace PlayerComponents
     public class AnimManager : MonoBehaviour
     {
         public Animator animator;
-        public NavMeshAgent agent; 
         public Transform carryAnchor;
+        public Movement_XZ movement;
         private const int ANIM_MOVEMENT_IDLE = 0;
         private const int ANIM_MOVEMENT_WALK = 1;
         private const int ANIM_MOVEMENT_RUN = 2;
@@ -26,7 +26,7 @@ namespace PlayerComponents
 
         public void WalkingAnimations()
         {
-            if(agent.velocity.sqrMagnitude > 0)
+            if(IsMoving())
             {
                 animator.SetInteger(MOVEMENT_ID, ANIM_MOVEMENT_WALK);
                 return; 
@@ -43,6 +43,11 @@ namespace PlayerComponents
         public void ChangeToWalk()
         {
             animator.SetInteger(MOVEMENT_STYLE_ID, STYLE_ID_WALK);
+        }
+
+        private bool IsMoving()
+        {
+            return movement.IsMoving() != 0;
         }
     }
 }

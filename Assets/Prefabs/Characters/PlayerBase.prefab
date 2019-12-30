@@ -439,8 +439,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 5701006393854298002}
-  agent: {fileID: 5641387577899878886}
   carryAnchor: {fileID: 7774919654457713812}
+  movement: {fileID: 4904817698472874447}
 --- !u!114 &5517184841365937206
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1120,7 +1120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1407d101c687ead428afdb45e81b9b3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed_walk: 3
+  speed_walk: 2
   speed_run: 4
 --- !u!1 &7728951410761357096
 GameObject:
