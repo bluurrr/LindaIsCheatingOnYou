@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EmotionManager : MonoBehaviour
+[System.Serializable]
+public class PlayerLoudOut 
 {
-    public enum Emotions{idle, happy};
-    public Emotions currentEmotion; 
+    public string name;
+    public CharacterDataBank.Characters character;
     public List<EmoteLevelInformation> Sad, Mad, Happy, Anxious, Loveing;
-
 }

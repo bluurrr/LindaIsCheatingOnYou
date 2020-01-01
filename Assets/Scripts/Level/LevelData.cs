@@ -8,4 +8,5 @@ public class LevelData
 {
     public string name; 
     public GameObject map;
+    public List<PlayerLoudOut> playerLoudOuts; 
 }
