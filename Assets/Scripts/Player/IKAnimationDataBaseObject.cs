@@ -10,4 +10,5 @@ public class IKAnimationDataBaseObject
     public enum IK_Animation_ID {kiss, hug};
     public IK_Animation_ID iD; 
     public GameObject obj;
+    public Sprite icon;
 }

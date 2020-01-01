@@ -7,6 +7,7 @@ using UnityEngine.EventSystems;
 
 public class UIManager : UnityInSceneSingleton<UIManager>
 {
+    public EmoteMenu emoteMenu;
     public GameObject actionButtonPrefab;
     public Transform actionButtonParent;
     private const float MENU_DIST_EXIT_THRESHOLD = 3;

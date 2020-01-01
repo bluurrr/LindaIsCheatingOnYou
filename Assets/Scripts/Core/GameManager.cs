@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public ActionDataBank actionDataBank;
     public LevelDataBase levelManager;
     public PlayersManager playerManager;
+    public EmoteMenu emoteMenu;
     private LevelData currentLevel; 
 
     void Awake()
@@ -19,6 +20,7 @@ public class GameManager : MonoBehaviour
     {
         playerManager.Init();
         actionDataBank.Init();
+        emoteMenu.Init(); 
         currentLevel = levelManager.GetRandomLevel();
         Instantiate(currentLevel.map, mapSpawn.transform.position, currentLevel.map.transform.rotation, mapSpawn); 
     }
