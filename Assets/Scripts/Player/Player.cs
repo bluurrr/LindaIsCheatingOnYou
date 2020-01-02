@@ -16,11 +16,14 @@ namespace PlayerComponents
         public Selector selector;
         public NavMeshAgent agent;
         public IKAnimationManager iKAnimationManager;
+        public EmotionManager emotionManager;
+
     
-        private void Awake()
+        public void Init(PlayerLoudOut loudOut)
         {
             animManager.Init();
             iKAnimationManager.Init();
+            emotionManager.Init(loudOut);
         }
         private void Update()
         {
@@ -41,9 +44,11 @@ namespace PlayerComponents
             agent.transform.DOLookAt(transform.position, 1, AxisConstraint.Y, Vector3.up);
             yield return new WaitForSeconds(1);
         }
-        
 
-
+        public void OpenEmoteMenu()
+        {
+            UIManager.Instance.emoteMenu.OpenEmoteMenu(emotionManager);
+        }
     }
 
 }

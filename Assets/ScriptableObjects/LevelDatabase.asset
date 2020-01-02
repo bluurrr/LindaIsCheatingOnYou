@@ -25,6 +25,8 @@ MonoBehaviour:
       Happy:
       - level: 1
         iK_Animation: 1
+      - level: 1
+        iK_Animation: 0
       Anxious: []
       Loveing: []
     - name: Jamie

@@ -11,9 +11,10 @@ public class EmoteBubbleButton : MonoBehaviour
     public Color normal, hover, selected;
     public ChatBubble chatBubble;
 
-    public void SetUp(Sprite icon)
+    public void SetUp(IKAnimationDataBaseObject.IK_Animation_ID anim)
     {
-        this.icon.sprite = icon;
+        print("im trying to get " + anim);
+        this.icon.sprite = GameManager.Instance.iKAnimationDatabank.GetAnimation(anim).icon;
         Normal();
     }
 
