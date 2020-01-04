@@ -56,4 +56,9 @@ public class UIManager : UnityInSceneSingleton<UIManager>
         }
             return false;
     }
+
+    public void RunEmoteMenu(Transform headAnchor)
+    {
+        emoteMenu.Run(headAnchor);
+    }
 }

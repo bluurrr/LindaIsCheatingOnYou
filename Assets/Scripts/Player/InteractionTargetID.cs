@@ -6,7 +6,7 @@ using UnityEngine;
 public class InteractionTargetID : MonoBehaviour
 {
      public InteractionTarget interactionTarget;
-     public enum IK_Point_Player{Butt_Right, Arm_UnderArm_Left, None};
+     public enum IK_Point_Player{Butt_Right, Arm_UnderArm_Left, Head_Above,None};
      public IK_Point_Player attachmentID;
 
      public enum AnimationType{pin, oneOff, none};

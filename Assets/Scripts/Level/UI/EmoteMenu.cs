@@ -8,6 +8,7 @@ public class EmoteMenu : MonoBehaviour
     public GameObject EmoteBubblePrefab;
     private int SelectionIndex = -1;
     private Dictionary<int, Transform> SpawnOrderDictionary = new Dictionary<int, Transform>();
+    private Camera camera;
     public void Init()
     {
         EmoteButtonSpawn[] spawnPoints = GetComponentsInChildren<EmoteButtonSpawn>();
@@ -16,6 +17,7 @@ public class EmoteMenu : MonoBehaviour
             SpawnOrderDictionary.Add(emoteButtonSpawn.spawnOrder, emoteButtonSpawn.transform);
         }
         Center.SetActive(false);
+        camera = Camera.main;
     }
 
     public void OpenEmoteMenu(EmotionManager emotionManager)
@@ -32,5 +34,13 @@ public class EmoteMenu : MonoBehaviour
             emoteBubble.SetUp(emotes[i]);
         }
         Center.SetActive(true);
+    }
+
+    public void Run(Transform headAnchor)
+    {
+        //if(!Center.activeSelf) return; 
+        Vector3 destination = camera.WorldToScreenPoint(headAnchor.position);
+        Center.transform.position = destination; 
+        print("head anchor");
     }
 }

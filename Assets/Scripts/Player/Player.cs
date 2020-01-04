@@ -30,6 +30,7 @@ namespace PlayerComponents
             animManager.WalkingAnimations();
             lineOfSight.Look(); 
             selector.Select();
+            UIManager.Instance.RunEmoteMenu(iKAnimationManager.GetIKPoint("Head_Above"));
         }
 
         private void SetDestination(Vector3 destination)
