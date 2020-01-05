@@ -1,13 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Singletons;
 using RootMotion.FinalIK;
 
 public class IKAnimationManager : MonoBehaviour
 {
     public GameObject ModelRoot; 
     public FullBodyBipedIK fullBodyBipedIK;
+    public InteractionSystem interactionSystem;
+    public Transform ikSpawn;
     private Dictionary<string, Transform> IKPoints =  new Dictionary<string, Transform>();
 
     public void Init()
@@ -65,6 +66,11 @@ public class IKAnimationManager : MonoBehaviour
         fullBodyBipedIK.solver.rightHandEffector.target = null;
         fullBodyBipedIK.solver.leftHandEffector.target = null;
         fullBodyBipedIK.solver.bodyEffector.target = null;
+    }
+
+    public void PlayIKAnimation(IKAnimationDataBaseObject ikObj)
+    {
+        InteractionObject interactionObject = Instantiate(ikObj.prefab, ikSpawn).GetComponent<InteractionObject>();
     }
 
 }

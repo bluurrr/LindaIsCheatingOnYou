@@ -59,7 +59,6 @@ public class UIManager : UnityInSceneSingleton<UIManager>
 
     public GameObject GetUiObject(Vector3 Input)
     {
-        print("get ui");
         PointerEventData pointerData = new PointerEventData(EventSystem.current);
         pointerData.position = Input;
 
@@ -67,7 +66,6 @@ public class UIManager : UnityInSceneSingleton<UIManager>
         EventSystem.current.RaycastAll(pointerData, results);
         foreach(var obj in results)
         {
-            print("found: " + obj.gameObject.name);
             return results[0].gameObject;
         }
         return null;

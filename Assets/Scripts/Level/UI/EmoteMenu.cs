@@ -6,10 +6,14 @@ public class EmoteMenu : MonoBehaviour
 {
     public GameObject Center; 
     public GameObject EmoteBubblePrefab;
+    public IKAnimationDatabank iKAnimationDataBase;
+    public PlayersManager playersManager;
     private int SelectionIndex = -1;
     private Dictionary<int, Transform> SpawnOrderDictionary = new Dictionary<int, Transform>();
     private Camera camera;
     private List<EmoteBubbleButton> currentEmotes = new List<EmoteBubbleButton>();
+    private EmoteBubbleButton selectedEmote;
+
     public void Init()
     {
         EmoteButtonSpawn[] spawnPoints = GetComponentsInChildren<EmoteButtonSpawn>();
@@ -41,13 +45,23 @@ public class EmoteMenu : MonoBehaviour
     public void CloseEmoteMenu()
     {
         if(!Center.activeSelf) return;
+        if(selectedEmote)
+        {
+            Play();
+        }
         foreach(var button in currentEmotes)
         {
             Destroy(button.transform.gameObject);
         }
         currentEmotes.Clear();
+        selectedEmote = null;
         Center.SetActive(false);
-  
+    }
+
+    private void Play()
+    {
+        IKAnimationDataBaseObject animation = iKAnimationDataBase.GetAnimation(selectedEmote.id);
+        playersManager.GetActivePlayer().iKAnimationManager.PlayIKAnimation(animation);
     }
 
     public void Run(Transform headAnchor)
@@ -56,24 +70,31 @@ public class EmoteMenu : MonoBehaviour
         Vector3 destination = camera.WorldToScreenPoint(headAnchor.position);
         Center.transform.position = destination; 
 
-        Vector3 direction = new Vector3(Input.GetAxis("RS_Horizontal"), Input.GetAxis("RS_Vertical"),0);
-        Vector3 inputPoint = camera.WorldToScreenPoint(headAnchor.position + (direction * .5f));
-        EmoteBubbleButton selected = null;
-
-        Debug.DrawLine(headAnchor.position, headAnchor.position + (direction * .5f), Color.red, 1);
-
-        if(UIManager.Instance.GetUiObject(inputPoint))
-        {
-            print("ui obj found: " + UIManager.Instance.GetUiObject(inputPoint).name);
-            selected = UIManager.Instance.GetUiObject(inputPoint).GetComponent<EmoteBubbleButton>();
-
-        }
-       
-        if(selected && !selected.IsHovered())
+        if(!IsMovingRS())
         {
             foreach(var emote in currentEmotes)
             {
-                if(emote != selected)
+                emote.Normal();
+            }
+            return;
+        } 
+       
+        Vector3 direction = new Vector3(Input.GetAxis("RS_Horizontal"), Input.GetAxis("RS_Vertical"),0);
+        Vector3 inputPoint = camera.WorldToScreenPoint(headAnchor.position + (direction * .5f));
+
+        Debug.DrawLine(headAnchor.position, headAnchor.position + (direction * .5f), Color.red, 1);
+
+        GameObject ui = UIManager.Instance.GetUiObject(inputPoint);
+        if(ui && ui.tag == Consts.TAG_EMOTE_BUTTON)
+        {
+            selectedEmote = ui.GetComponent<EmoteBubbleButton>();
+        }
+       
+        if(selectedEmote && !selectedEmote.IsHovered())
+        {
+            foreach(var emote in currentEmotes)
+            {
+                if(emote != selectedEmote)
                 {
                     emote.Normal();
                 }
@@ -81,9 +102,12 @@ public class EmoteMenu : MonoBehaviour
                 {
                     emote.Hover();
                 }
-                
             }
-            selected.Hover();
         }
+    }
+
+    public bool IsMovingRS()
+    {
+        return (Input.GetAxis("RS_Horizontal") != 0 || Input.GetAxis("RS_Vertical") != 0);
     }
 }

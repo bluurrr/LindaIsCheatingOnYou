@@ -1041,6 +1041,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ModelRoot: {fileID: 0}
   fullBodyBipedIK: {fileID: 1367690081177187021}
+  interactionSystem: {fileID: 3754287403226285102}
+  ikSpawn: {fileID: 870159361866426647}
 --- !u!114 &8578410700690839605
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -9,6 +9,7 @@ public class IKAnimationDataBaseObject
     public string name;
     public enum IK_Animation_ID {kiss, hug};
     public IK_Animation_ID iD; 
-    public GameObject obj;
+    public GameObject prefab;
     public Sprite icon;
+    public FullBodyBipedEffector[] effectors; 
 }

@@ -422,6 +422,9 @@ MonoBehaviour:
   Center: {fileID: 2036737198}
   EmoteBubblePrefab: {fileID: 4252283651572587231, guid: 928ce411b2e90c64ebc84b3e329f664f,
     type: 3}
+  iKAnimationDataBase: {fileID: 11400000, guid: bc06bb5ae1929b84eb84afcd32b5f4d5,
+    type: 2}
+  playersManager: {fileID: 1521906750}
 --- !u!1 &734421534
 GameObject:
   m_ObjectHideFlags: 0

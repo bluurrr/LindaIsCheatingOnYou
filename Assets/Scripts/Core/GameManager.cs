@@ -22,12 +22,10 @@ public class GameManager : UnityInSceneSingleton<GameManager>
         SpawnLevel();
         PopulateLevel();
     }
-
     private void Init()
     {
         iKAnimationDatabank.Init();
         characterDataBank.Init();
-        playerManager.Init();
         actionDataBank.Init();
         emoteMenu.Init(); 
     }
@@ -68,6 +66,7 @@ public class GameManager : UnityInSceneSingleton<GameManager>
         GameObject linda = Instantiate(characterDataBank.GetCharacter(CharacterDataBank.Characters.linda), lindaSpawn, characterDataBank.GetCharacter(CharacterDataBank.Characters.linda).transform.rotation);
         playerDictionary.Add(CharacterDataBank.Characters.jamie, jamie.GetComponent<Player>());
         playerDictionary.Add(CharacterDataBank.Characters.linda, linda.GetComponent<Player>());
+        playerManager.Init();
     }
 
     private void PopulatePlayerLoudouts()
