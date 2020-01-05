@@ -50,6 +50,11 @@ namespace PlayerComponents
         {
             UIManager.Instance.emoteMenu.OpenEmoteMenu(emotionManager);
         }
+
+        public void CloseEmoteMenu()
+        {
+            UIManager.Instance.emoteMenu.CloseEmoteMenu();    
+        }
     }
 
 }

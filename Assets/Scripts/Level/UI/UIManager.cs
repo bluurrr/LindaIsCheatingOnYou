@@ -45,8 +45,8 @@ public class UIManager : UnityInSceneSingleton<UIManager>
         PointerEventData pointerData = new PointerEventData(EventSystem.current);
         pointerData.position = Input.mousePosition;
 
-            List<RaycastResult> results = new List<RaycastResult>();
-            EventSystem.current.RaycastAll(pointerData, results);
+        List<RaycastResult> results = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(pointerData, results);
         foreach(var obj in results)
         {
             if(results[0].gameObject.layer == LayerMask.NameToLayer(Consts.LAYER_WORLD_SPACE_UI))
@@ -55,6 +55,22 @@ public class UIManager : UnityInSceneSingleton<UIManager>
             }
         }
             return false;
+    }
+
+    public GameObject GetUiObject(Vector3 Input)
+    {
+        print("get ui");
+        PointerEventData pointerData = new PointerEventData(EventSystem.current);
+        pointerData.position = Input;
+
+        List<RaycastResult> results = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(pointerData, results);
+        foreach(var obj in results)
+        {
+            print("found: " + obj.gameObject.name);
+            return results[0].gameObject;
+        }
+        return null;
     }
 
     public void RunEmoteMenu(Transform headAnchor)

@@ -6,8 +6,8 @@ public class Movement_XZ : MonoBehaviour
 {
     public float speed_walk, speed_run;
     private float speed_override;
-    private const string AXIS_HORIZONTAL = "Horizontal";
-    private const string AXIS_VERTICAL = "Vertical";
+    private const string AXIS_HORIZONTAL = "LS_Horizontal";
+    private const string AXIS_VERTICAL = "LS_Vertical";
     private bool speedOverRideActive, running;
 
     void Update()

@@ -13,7 +13,6 @@ public class EmoteBubbleButton : MonoBehaviour
 
     public void SetUp(IKAnimationDataBaseObject.IK_Animation_ID anim)
     {
-        print("im trying to get " + anim);
         this.icon.sprite = GameManager.Instance.iKAnimationDatabank.GetAnimation(anim).icon;
         Normal();
     }
@@ -34,5 +33,10 @@ public class EmoteBubbleButton : MonoBehaviour
     {
         bubble.color = normal;
         extender.color = normal;
+    }
+
+    public bool IsHovered()
+    {
+        return bubble.color == hover;
     }
 }
