@@ -360,6 +360,7 @@ GameObject:
   - component: {fileID: 8578410700690839605}
   - component: {fileID: 6738640671877882461}
   - component: {fileID: 2049066471533914099}
+  - component: {fileID: 56668288792464898}
   - component: {fileID: 4904817698472874447}
   m_Layer: 8
   m_Name: PlayerBase
@@ -1043,6 +1044,7 @@ MonoBehaviour:
   fullBodyBipedIK: {fileID: 1367690081177187021}
   interactionSystem: {fileID: 3754287403226285102}
   ikSpawn: {fileID: 870159361866426647}
+  headspawn: {fileID: 268817840080912762}
 --- !u!114 &8578410700690839605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1123,6 +1125,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   input: 1
+  buttonDown:
+    m_PersistentCalls:
+      m_Calls: []
+  button:
+    m_PersistentCalls:
+      m_Calls: []
+  buttonUp:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &56668288792464898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5642474205120641214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42a666529707c7b45a1a5f33d1dfa04d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  input: 3
   buttonDown:
     m_PersistentCalls:
       m_Calls: []

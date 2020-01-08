@@ -60,8 +60,8 @@ public class EmoteMenu : MonoBehaviour
 
     private void Play()
     {
-        IKAnimationDataBaseObject animation = iKAnimationDataBase.GetAnimation(selectedEmote.id);
-        playersManager.GetActivePlayer().iKAnimationManager.PlayIKAnimation(animation);
+        IKAnimation animation = iKAnimationDataBase.GetAnimation(selectedEmote.id);
+        playersManager.GetActivePlayer().iKAnimationManager.PlayEmote(animation);
     }
 
     public void Run(Transform headAnchor)

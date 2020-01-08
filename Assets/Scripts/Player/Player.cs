@@ -28,9 +28,10 @@ namespace PlayerComponents
         private void Update()
         {
             animManager.WalkingAnimations();
+            iKAnimationManager.Run();
             lineOfSight.Look(); 
             selector.Select();
-            UIManager.Instance.RunEmoteMenu(iKAnimationManager.GetIKPoint("Head_Above"));
+            UIManager.Instance.RunEmoteMenu(iKAnimationManager.headspawn);
         }
 
         private void SetDestination(Vector3 destination)

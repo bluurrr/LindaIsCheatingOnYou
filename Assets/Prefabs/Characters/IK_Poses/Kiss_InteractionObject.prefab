@@ -670,7 +670,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactionTarget: {fileID: 2391484501805947591}
   attachmentID: 2
-  animationType: 2
+  animationType: 0
 --- !u!1 &706780131922370953
 GameObject:
   m_ObjectHideFlags: 0
@@ -957,7 +957,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2505781769730472355}
   - component: {fileID: 2269085650831228973}
-  - component: {fileID: 9052609358572506573}
+  - component: {fileID: 4176127127568172375}
   m_Layer: 0
   m_Name: Kiss_InteractionObject
   m_TagString: Untagged
@@ -1125,7 +1125,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
---- !u!114 &9052609358572506573
+--- !u!114 &4176127127568172375
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1134,7 +1134,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1087290684165675439}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3c45f3ce5fc00242a81ade8cd7cac9e, type: 3}
+  m_Script: {fileID: 11500000, guid: bb861c709a0441943bcf36a5d6df6220, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1148230915246289771

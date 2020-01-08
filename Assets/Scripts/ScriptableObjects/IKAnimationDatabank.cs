@@ -5,18 +5,18 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "IKAnimationDataBase", menuName = "ScriptableObjects/IKAnimationDataBase")]
 public class IKAnimationDatabank : ScriptableObject
 {
-    public IKAnimationDataBaseObject[] IKAnimations;
-    public Dictionary<IKAnimationDataBaseObject.IK_Animation_ID, IKAnimationDataBaseObject> animationDictionary = new Dictionary<IKAnimationDataBaseObject.IK_Animation_ID, IKAnimationDataBaseObject>(); 
+    public IKAnimation[] IKAnimations;
+    public Dictionary<IKAnimation.IK_Animation_ID, IKAnimation> animationDictionary = new Dictionary<IKAnimation.IK_Animation_ID, IKAnimation>(); 
     
     public void Init()
     {
-        foreach(IKAnimationDataBaseObject anim in IKAnimations)
+        foreach(IKAnimation anim in IKAnimations)
         {
             animationDictionary.Add(anim.iD, anim);
         }
     }
 
-    public IKAnimationDataBaseObject GetAnimation(IKAnimationDataBaseObject.IK_Animation_ID animationID)
+    public IKAnimation GetAnimation(IKAnimation.IK_Animation_ID animationID)
     {
         if(animationDictionary.ContainsKey(animationID))
         {

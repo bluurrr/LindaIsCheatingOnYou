@@ -8,7 +8,7 @@ namespace Inputs.Controller
     public class InputManager : UnityInSceneSingleton<InputManager>
     {
         public enum Input { A, X, Y, B, RTrigger, LTrigger };
-
+        public const string B_InputKey = "B";
         public const string A_InputKey = "A";
         public const string X_InputKey = "X";
         public const string RTrigger_InputKey = "RTrigger";
@@ -20,6 +20,7 @@ namespace Inputs.Controller
 
         void Awake()
         {
+            InputKeys.Add(Input.B, B_InputKey);
             InputKeys.Add(Input.A, A_InputKey);
             InputKeys.Add(Input.X, X_InputKey);
             InputKeys.Add(Input.LTrigger, LTrigger_InputKey);

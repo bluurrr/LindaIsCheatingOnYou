@@ -412,7 +412,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8230359044246278634}
   - component: {fileID: 8972538756575682915}
-  - component: {fileID: 8515007398868900990}
   m_Layer: 8
   m_Name: Body
   m_TagString: Untagged
@@ -457,21 +456,6 @@ MonoBehaviour:
   twistWeight: 1
   swingWeight: 0
   rotateOnce: 1
---- !u!114 &8515007398868900990
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 830191656875474917}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dffe23209bffacb4dbad6e1ef649f2a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactionTarget: {fileID: 8972538756575682915}
-  attachmentID: 2
-  animationType: 2
 --- !u!1 &977113899249598034
 GameObject:
   m_ObjectHideFlags: 0
@@ -1049,7 +1033,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7696650166782056057}
   - component: {fileID: 7699611670356636578}
-  - component: {fileID: 6589404628952828213}
   m_Layer: 8
   m_Name: hand_r
   m_TagString: Untagged
@@ -1096,21 +1079,6 @@ MonoBehaviour:
   twistWeight: 1
   swingWeight: 0
   rotateOnce: 1
---- !u!114 &6589404628952828213
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1850674861296601646}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dffe23209bffacb4dbad6e1ef649f2a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactionTarget: {fileID: 7699611670356636578}
-  attachmentID: 0
-  animationType: 0
 --- !u!1 &1869829799303447308
 GameObject:
   m_ObjectHideFlags: 0
@@ -3991,7 +3959,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8484662473347993921}
   - component: {fileID: 7397814808500854875}
-  - component: {fileID: 24663602485684916}
   m_Layer: 8
   m_Name: hand_l
   m_TagString: Untagged
@@ -4038,21 +4005,6 @@ MonoBehaviour:
   twistWeight: 1
   swingWeight: 0
   rotateOnce: 1
---- !u!114 &24663602485684916
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5458521797864638768}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dffe23209bffacb4dbad6e1ef649f2a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactionTarget: {fileID: 7397814808500854875}
-  attachmentID: 1
-  animationType: 0
 --- !u!1 &5654443239630610246
 GameObject:
   m_ObjectHideFlags: 0
@@ -5839,7 +5791,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5038396542075067916}
   - component: {fileID: 8669641123429656450}
-  - component: {fileID: 3124458231220345610}
+  - component: {fileID: -5508595254371681705}
   m_Layer: 0
   m_Name: Hug_InteractionObject
   m_TagString: Untagged
@@ -5854,7 +5806,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7510734063340535296}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -6007,7 +5959,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
---- !u!114 &3124458231220345610
+--- !u!114 &-5508595254371681705
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6016,7 +5968,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7510734063340535296}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3c45f3ce5fc00242a81ade8cd7cac9e, type: 3}
+  m_Script: {fileID: 11500000, guid: bb861c709a0441943bcf36a5d6df6220, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &7619202499819951879

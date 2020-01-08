@@ -6,6 +6,6 @@ using UnityEngine;
 public class EmoteLevelInformation 
 {
     public int level;
-    public IKAnimationDataBaseObject.IK_Animation_ID iK_Animation;
+    public IKAnimation.IK_Animation_ID iK_Animation;
 
 }

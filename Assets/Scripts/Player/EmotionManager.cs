@@ -17,7 +17,7 @@ public class EmotionManager : MonoBehaviour
         Loveing = loudOut.Loveing; 
     }
 
-    public List<IKAnimationDataBaseObject.IK_Animation_ID> GetCurrentMoodEmotes()
+    public List<IKAnimation.IK_Animation_ID> GetCurrentMoodEmotes()
     {
         switch(currentEmotion)
         {
@@ -35,9 +35,9 @@ public class EmotionManager : MonoBehaviour
         return null;
     }
 
-    private List<IKAnimationDataBaseObject.IK_Animation_ID> GetMoodEmotes(int level, List<EmoteLevelInformation> emotion)
+    private List<IKAnimation.IK_Animation_ID> GetMoodEmotes(int level, List<EmoteLevelInformation> emotion)
     {
-        List<IKAnimationDataBaseObject.IK_Animation_ID> anims = new List<IKAnimationDataBaseObject.IK_Animation_ID>();
+        List<IKAnimation.IK_Animation_ID> anims = new List<IKAnimation.IK_Animation_ID>();
         foreach(EmoteLevelInformation levelInformation in emotion)
         {
             if(levelInformation.level == level)

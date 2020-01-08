@@ -8,69 +8,54 @@ public class IKAnimationManager : MonoBehaviour
     public GameObject ModelRoot; 
     public FullBodyBipedIK fullBodyBipedIK;
     public InteractionSystem interactionSystem;
-    public Transform ikSpawn;
-    private Dictionary<string, Transform> IKPoints =  new Dictionary<string, Transform>();
-
+    public Transform ikSpawn, headspawn;
+    //private Dictionary<string, Transform> IKPoints =  new Dictionary<string, Transform>();
+    private Pose currentPose;
     public void Init()
     {
-        IKPoint[] ikPoints = ModelRoot.GetComponentsInChildren<IKPoint>();
-        foreach(IKPoint point in ikPoints)
-        {
-            IKPoints.Add(point.iD.ToString(), point.transform);
-        }
+        // IKTarget[] ikPoints = ModelRoot.GetComponentsInChildren<IKTarget>();
+        // foreach(IKTarget point in ikPoints)
+        // {
+        //     IKPoints.Add(point.iD.ToString(), point.transform);
+        // }
+    }
+
+    public void Run()
+    {
+        if(currentPose == null) return;
+        currentPose.RunAnim(fullBodyBipedIK);
+        StopEmote();
     }
 
     public Transform GetIKPoint(string key)
     {
-        if(IKPoints.ContainsKey(key))
-        {
-            return IKPoints[key];
-        }
+        // if(IKPoints.ContainsKey(key))
+        // {
+        //     return IKPoints[key];
+        // }
         return null;
     }
 
-    public void AssignIKTarget(InteractionTarget interactionTarget, Transform obj)
+    public void PlayEmote(IKAnimation ikObj)
     {
-        switch(interactionTarget.effectorType)
+        Pose pose = Instantiate(ikObj.prefab, ikSpawn).GetComponent<Pose>();
+        pose.Init();
+        currentPose = pose; 
+    }
+    private void StopEmote()
+    {
+        if(Input.GetButtonDown("B"))
         {
-            case RootMotion.FinalIK.FullBodyBipedEffector.RightHand:
-                fullBodyBipedIK.solver.rightHandEffector.target = obj;
-            break;
-            case RootMotion.FinalIK.FullBodyBipedEffector.LeftHand:
-                fullBodyBipedIK.solver.leftHandEffector.target = obj;
-            break;
-            case RootMotion.FinalIK.FullBodyBipedEffector.Body:
-                fullBodyBipedIK.solver.bodyEffector.target = obj;
-            break;  
+            currentPose.StopAnim(fullBodyBipedIK);
+            currentPose = null;
+            foreach(Transform emote in ikSpawn)
+            {
+                Destroy(emote.gameObject);
+            }
         }
     }
 
-    public void ClearIKTarget(InteractionTarget interactionTarget)
-    {
-        switch(interactionTarget.effectorType)
-        {
-            case RootMotion.FinalIK.FullBodyBipedEffector.RightHand:
-                fullBodyBipedIK.solver.rightHandEffector.target = null;
-            break;
-            case RootMotion.FinalIK.FullBodyBipedEffector.LeftHand:
-                fullBodyBipedIK.solver.leftHandEffector.target = null;
-            break;
-            case RootMotion.FinalIK.FullBodyBipedEffector.Body:
-                fullBodyBipedIK.solver.bodyEffector.target = null;
-            break;  
-        }
-    }
 
-    public void ClearAllIKTargets()
-    {
-        fullBodyBipedIK.solver.rightHandEffector.target = null;
-        fullBodyBipedIK.solver.leftHandEffector.target = null;
-        fullBodyBipedIK.solver.bodyEffector.target = null;
-    }
 
-    public void PlayIKAnimation(IKAnimationDataBaseObject ikObj)
-    {
-        InteractionObject interactionObject = Instantiate(ikObj.prefab, ikSpawn).GetComponent<InteractionObject>();
-    }
 
 }
