@@ -24,7 +24,7 @@ MonoBehaviour:
       Mad: []
       Happy:
       - level: 1
-        iK_Animation: 1
+        iK_Animation: 2
       - level: 1
         iK_Animation: 0
       Anxious: []
