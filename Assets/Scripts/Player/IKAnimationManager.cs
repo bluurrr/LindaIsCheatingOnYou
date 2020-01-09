@@ -38,6 +38,7 @@ public class IKAnimationManager : MonoBehaviour
 
     public void PlayEmote(IKAnimation ikObj)
     {
+        ClearIKPoses();
         Pose pose = Instantiate(ikObj.prefab, ikSpawn).GetComponent<Pose>();
         pose.Init();
         currentPose = pose; 
@@ -48,10 +49,15 @@ public class IKAnimationManager : MonoBehaviour
         {
             currentPose.StopAnim(fullBodyBipedIK);
             currentPose = null;
-            foreach(Transform emote in ikSpawn)
-            {
-                Destroy(emote.gameObject);
-            }
+            ClearIKPoses();
+        }
+    }
+
+    private void ClearIKPoses()
+    {
+        foreach(Transform emote in ikSpawn)
+        {
+            Destroy(emote.gameObject);
         }
     }
 

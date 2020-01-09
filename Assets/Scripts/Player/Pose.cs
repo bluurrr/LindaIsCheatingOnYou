@@ -40,6 +40,12 @@ public class Pose : MonoBehaviour
             player.solver.leftHandEffector.positionWeight = 1;
             player.solver.leftHandEffector.rotationWeight = 1;
         }
+        else
+        {
+            player.solver.leftHandEffector.positionWeight = 0;
+            player.solver.leftHandEffector.rotationWeight = 0;
+        }
+
         if(activeRightHand)
         {
             player.solver.rightHandEffector.position = targetDictionary[FullBodyBipedEffector.RightHand].position;
@@ -47,12 +53,23 @@ public class Pose : MonoBehaviour
             player.solver.rightHandEffector.positionWeight = 1;
             player.solver.rightHandEffector.rotationWeight = 1;
         }
+        else
+        {
+            player.solver.rightHandEffector.positionWeight = 0;
+            player.solver.rightHandEffector.rotationWeight = 0;
+        }
+
         if(activeBody)
         {
             player.solver.bodyEffector.position = targetDictionary[FullBodyBipedEffector.RightHand].position;
             player.solver.bodyEffector.rotation = targetDictionary[FullBodyBipedEffector.RightHand].rotation;
             player.solver.bodyEffector.positionWeight = 1;
             player.solver.bodyEffector.rotationWeight = 1;
+        }
+        else
+        {
+            player.solver.bodyEffector.positionWeight = 0;
+            player.solver.bodyEffector.rotationWeight = 0;
         }
     }
 

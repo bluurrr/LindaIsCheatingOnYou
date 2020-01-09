@@ -32,7 +32,6 @@ public class EmoteMenu : MonoBehaviour
         var emotes = emotionManager.GetCurrentMoodEmotes();
         for(int i = 0; i< emotes.Count; i++)
         {
-
             GameObject button = Instantiate(EmoteBubblePrefab, SpawnOrderDictionary[i+1].transform);
             button.transform.localPosition = Vector3.zero;
             EmoteBubbleButton emoteBubble = button.GetComponent<EmoteBubbleButton>();
