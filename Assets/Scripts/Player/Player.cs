@@ -29,8 +29,9 @@ namespace PlayerComponents
         {
             animManager.WalkingAnimations();
             iKAnimationManager.Run();
-            lineOfSight.Look(); 
-            selector.Select();
+            emotionManager.Run();
+            //lineOfSight.Look(); 
+            //selector.Select();
             UIManager.Instance.RunEmoteMenu(iKAnimationManager.headspawn);
         }
 

@@ -1164,6 +1164,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Linda
       objectReference: {fileID: 0}
+    - target: {fileID: 5642474205120641214, guid: 0ae7ef01392650042a22d8ff6766fad7,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 5645933110277429874, guid: 0ae7ef01392650042a22d8ff6766fad7,
         type: 3}
       propertyPath: m_LocalPosition.x

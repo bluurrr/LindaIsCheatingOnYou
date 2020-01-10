@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Consts 
 {
+    public const string TAG_PLAYER = "Player";
     public const string TAG_FLOOR = "Floor";
     public const string TAG_EMOTE_BUTTON = "EmoteBubble";
     public const string TAG_INTERACTABLE_OBJECT = "InteractableObject";
