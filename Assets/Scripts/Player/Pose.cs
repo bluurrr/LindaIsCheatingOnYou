@@ -5,15 +5,15 @@ using RootMotion.FinalIK;
 using UnityEngine;
 
 public class Pose : MonoBehaviour
-{        
-    InteractionTarget[] targets;
+{
+    RootMotion.FinalIK.InteractionTarget[] targets;
     private bool activeLeftHand, activeRightHand,activeBody;
-    private Dictionary<FullBodyBipedEffector, Transform> targetDictionary = new Dictionary<FullBodyBipedEffector, Transform>();
-    
+    public Dictionary<FullBodyBipedEffector, Transform> targetDictionary = new Dictionary<FullBodyBipedEffector, Transform>();
+    public IKAnimation.IK_Animation_ID ID; 
     public void Init()
     {
-        targets = GetComponentsInChildren<InteractionTarget>();
-        foreach(InteractionTarget target in targets)
+        targets = GetComponentsInChildren<RootMotion.FinalIK.InteractionTarget>();
+        foreach(RootMotion.FinalIK.InteractionTarget target in targets)
         {
             switch(target.effectorType)
             {

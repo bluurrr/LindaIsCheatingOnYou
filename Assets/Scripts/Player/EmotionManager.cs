@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using RootMotion.FinalIK;
+using PlayerComponents;
 
 public class EmotionManager : MonoBehaviour
 {
@@ -9,7 +10,8 @@ public class EmotionManager : MonoBehaviour
     public Emotions currentEmotion;
     public int sadLevel, madLevel, happyLevel, anxiousLevel, loveingLevel;
     public List<EmoteLevelInformation> Sad, Mad, Happy, Anxious, Loveing;
-    public Collider collider; 
+    public Player player;
+    public bool monitorMe;
     
     public void Init(PlayerLoudOut loudOut)
     {
@@ -58,47 +60,16 @@ public class EmotionManager : MonoBehaviour
 
     private void OfferEmotes()
     {
-        if(OfferEmoteTriggered())
+        Player otherPlayer;
+        if(OfferEmoteTriggered(out otherPlayer))
         {
-            print("i will hug you now");
+           if(monitorMe)print("i will hug you now");
         }
     }
 
-    private bool OfferEmoteTriggered()
+    private bool OfferEmoteTriggered(out Player otherPlayer)
     {   
-        RaycastHit playerCheck;
-        OfferEmote_RayCast(out playerCheck);
-        if(playerCheck.transform && playerCheck.transform.CompareTag(Consts.TAG_PLAYER))
-        {
-            print("hittiing: " + playerCheck.transform.name);
-            EmotionManager otherEmoteManager = playerCheck.transform.GetComponentInParent<EmotionManager>();
-            return otherEmoteManager.OfferEmote_RayCast_PlayerCheck(collider);
-        }
-        return false;
+        return PlayersManager.Instance.CanPlayerInteract(player, out otherPlayer);
     }
-    private bool OfferEmote_RayCast(out RaycastHit playerCheck)
-    {   
-        Vector3 start = transform.position + (transform.TransformDirection(Vector3.up) * .1f);
-        Vector3 destination = start + (transform.TransformDirection(Vector3.forward) * .1f);
-        Debug.DrawLine(start, destination, Color.red, 1);
-        return Physics.Raycast(start, transform.TransformDirection(Vector3.forward) * .1f, out playerCheck);     
-    }
-    public bool OfferEmote_RayCast_PlayerCheck(Collider other)
-    {
-        RaycastHit hit;
-        OfferEmote_RayCast(out hit);
-        if(hit.transform && hit.transform.CompareTag(Consts.TAG_PLAYER))
-        {
-            print("found : " + hit.transform.parent.name + " From " + transform.name);
-            EmotionManager otherEmoteManager = hit.transform.GetComponentInParent<EmotionManager>();
-            return otherEmoteManager.collider == collider;
-        }        
-        return false;
-    }
-
-
-
-    
-
 
 }

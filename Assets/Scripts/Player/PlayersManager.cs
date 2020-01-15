@@ -16,4 +16,23 @@ public class PlayersManager : UnityInSceneSingleton<PlayersManager>
     {
         return players[0];
     }
+
+    public bool CanPlayerInteract(Player player, out Player interactablePlayer) 
+    {
+        float minDist = .25f;
+        foreach(Player p in players)
+        {
+            if(p != player)
+            {
+                if(Vector3.Distance(player.frontAnchor.position, p.frontAnchor.position) <= minDist)
+                {
+                    interactablePlayer = p; 
+                    EventManager.TriggerEvent(Consts.EVENT_PLAYER_CAN_INTERACT);
+                    return true;
+                }
+            }
+        }
+        interactablePlayer = null; 
+        return false;
+    }
 }

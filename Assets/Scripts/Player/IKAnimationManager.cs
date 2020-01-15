@@ -2,22 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 using RootMotion.FinalIK;
+using PlayerComponents;
 
 public class IKAnimationManager : MonoBehaviour
 {
+    public Player player;
     public GameObject ModelRoot; 
     public FullBodyBipedIK fullBodyBipedIK;
     public InteractionSystem interactionSystem;
     public Transform ikSpawn, headspawn;
-    //private Dictionary<string, Transform> IKPoints =  new Dictionary<string, Transform>();
-    private Pose currentPose;
+    public IKAnimationDatabank iKAnimationDatabank;
+    private Dictionary<InteractionTarget.IK_Point_Player, Transform> interactionTargets =  new Dictionary<InteractionTarget.IK_Point_Player, Transform>();
+    public Pose currentPose;
+
     public void Init()
     {
-        // IKTarget[] ikPoints = ModelRoot.GetComponentsInChildren<IKTarget>();
-        // foreach(IKTarget point in ikPoints)
-        // {
-        //     IKPoints.Add(point.iD.ToString(), point.transform);
-        // }
+        InteractionTarget[] targets = ModelRoot.GetComponentsInChildren<InteractionTarget>();
+        foreach(InteractionTarget point in targets)
+        {
+            interactionTargets.Add(point.attachmentID, point.transform);
+        }
     }
 
     public void Run()
@@ -27,12 +31,12 @@ public class IKAnimationManager : MonoBehaviour
         StopEmote();
     }
 
-    public Transform GetIKPoint(string key)
+    public Transform GetIKPoint(InteractionTarget.IK_Point_Player target)
     {
-        // if(IKPoints.ContainsKey(key))
-        // {
-        //     return IKPoints[key];
-        // }
+        if(interactionTargets.ContainsKey(target))
+        {
+            return interactionTargets[target];
+        }
         return null;
     }
 
@@ -41,6 +45,33 @@ public class IKAnimationManager : MonoBehaviour
         ClearIKPoses();
         Pose pose = Instantiate(ikObj.prefab, ikSpawn).GetComponent<Pose>();
         pose.Init();
+        print("pose init ");
+
+        foreach(var reaction in ikObj.reactions)
+        {
+            switch(reaction.iK_Animation_ID)
+            {
+                case IKAnimation.IK_Animation_ID.hug_hugging:
+                print("found this reaction " + reaction.triggerEvent.ToString());
+                //EventManager.StartListening(reaction.triggerEvent.ToString(), Play_Hugging);
+                break;  
+            }
+        }
+        print("player interact ");
+
+        Player otherPlayer;
+        if(PlayersManager.Instance.CanPlayerInteract(player,out otherPlayer))
+        {
+            print("if pass ");
+
+            foreach(var point in ikObj.playerInteractionTargets)
+            {
+                Transform playerPoint = otherPlayer.iKAnimationManager.GetIKPoint(point.playerPoint);
+                pose.targetDictionary[point.effector].transform.SetParent(playerPoint);
+            }
+        }
+
+
         currentPose = pose; 
     }
     private void StopEmote()
@@ -59,6 +90,19 @@ public class IKAnimationManager : MonoBehaviour
         {
             Destroy(emote.gameObject);
         }
+    }
+
+    private void Play_Hugging()
+    { 
+        print("current pose: " + currentPose.ID);
+        if(currentPose.ID == IKAnimation.IK_Animation_ID.hug_hugging) return;
+        print("after return ");
+        IKAnimation animation = iKAnimationDatabank.GetAnimation(IKAnimation.IK_Animation_ID.hug_hugging);
+        print("after animation ");
+        PlayEmote(animation);
+        print("after play ");
+
+        //EventManager.StopListening(Consts.Events.playerCanInteract.ToString(), Play_Hugging);
     }
 
 

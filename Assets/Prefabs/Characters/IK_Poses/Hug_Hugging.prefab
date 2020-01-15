@@ -5793,7 +5793,7 @@ GameObject:
   - component: {fileID: 8669641123429656450}
   - component: {fileID: -5508595254371681705}
   m_Layer: 0
-  m_Name: Hug_InteractionObject
+  m_Name: Hug_Hugging
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5971,6 +5971,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb861c709a0441943bcf36a5d6df6220, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ID: 1
 --- !u!1 &7619202499819951879
 GameObject:
   m_ObjectHideFlags: 0

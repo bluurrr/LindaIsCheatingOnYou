@@ -19,15 +19,33 @@ MonoBehaviour:
       type: 3}
     icon: {fileID: 21300000, guid: 1740ea00370b9704c94cc50820043c90, type: 3}
     effectors: 050000000600000000000000
+    reactions: []
+    playerInteractionTargets: []
   - name: Hugging
     iD: 1
     prefab: {fileID: 7510734063340535296, guid: 56855386fbfc4794493251487d5043b7,
       type: 3}
     icon: {fileID: 21300000, guid: aa06525ba21a3e64d8544f1c9cb903c0, type: 3}
     effectors: 050000000600000000000000
+    reactions:
+    - name: Hugging
+      triggerEvent: 0
+      iK_Animation_ID: 1
+    playerInteractionTargets:
+    - name: Left Hand
+      effector: 5
+      playerPoint: 1
+    - name: Right Hand
+      effector: 6
+      playerPoint: 0
   - name: Hug Offer
     iD: 2
     prefab: {fileID: 1880273587563429047, guid: 74d67d1ddc2b15c46823c7c6aa75a374,
       type: 3}
     icon: {fileID: 21300000, guid: aa06525ba21a3e64d8544f1c9cb903c0, type: 3}
     effectors: 0500000006000000
+    reactions:
+    - name: Hugging
+      triggerEvent: 0
+      iK_Animation_ID: 1
+    playerInteractionTargets: []

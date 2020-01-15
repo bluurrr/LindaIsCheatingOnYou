@@ -12,4 +12,6 @@ public class IKAnimation
     public GameObject prefab;
     public Sprite icon;
     public FullBodyBipedEffector[] effectors; 
+    public ReactionEvent[] reactions;
+    public EffectorToPlayerInteractionTarget[] playerInteractionTargets;
 }

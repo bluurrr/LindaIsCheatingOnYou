@@ -10,12 +10,7 @@ public class Movement_XZ : MonoBehaviour
     private const string AXIS_VERTICAL = "LS_Vertical";
     private bool speedOverRideActive, running;
 
-    void Update()
-    {
-        Movement();
-    }
-
-    void Movement()
+    public void Movement()
     {
         Vector3 input = new Vector3(Input.GetAxis(AXIS_HORIZONTAL), 0, Input.GetAxis(AXIS_VERTICAL));
         Quaternion targetRotation = Quaternion.LookRotation(input, Vector3.up);

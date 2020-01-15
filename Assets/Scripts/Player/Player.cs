@@ -17,6 +17,10 @@ namespace PlayerComponents
         public NavMeshAgent agent;
         public IKAnimationManager iKAnimationManager;
         public EmotionManager emotionManager;
+        public Movement_XZ movement_XZ;
+        public Transform frontAnchor;
+
+        public bool TestingDisable;
 
     
         public void Init(PlayerLoudOut loudOut)
@@ -25,8 +29,10 @@ namespace PlayerComponents
             iKAnimationManager.Init();
             emotionManager.Init(loudOut);
         }
-        private void Update()
+        private void FixedUpdate()
         {
+            if(TestingDisable) return;
+            movement_XZ.Movement();
             animManager.WalkingAnimations();
             iKAnimationManager.Run();
             emotionManager.Run();
