@@ -7,11 +7,11 @@ using UnityEngine;
 public class IKAnimation 
 {
     public string name;
-    public enum IK_Animation_ID {kiss_offer, hug_hugging, hug_offer};
+    public enum IK_Animation_ID {kiss_offer, hug_hugging, hug_offer, none};
     public IK_Animation_ID iD; 
     public GameObject prefab;
     public Sprite icon;
     public FullBodyBipedEffector[] effectors; 
-    public ReactionEvent[] reactions;
+    public IK_Animation_ID offerAnimation;
     public EffectorToPlayerInteractionTarget[] playerInteractionTargets;
 }

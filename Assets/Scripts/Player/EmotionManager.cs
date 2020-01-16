@@ -22,11 +22,6 @@ public class EmotionManager : MonoBehaviour
         Loveing = loudOut.Loveing; 
     }
 
-    public void Run()
-    {
-        OfferEmotes();
-    }
-
     public List<IKAnimation.IK_Animation_ID> GetCurrentMoodEmotes()
     {
         switch(currentEmotion)
@@ -58,18 +53,6 @@ public class EmotionManager : MonoBehaviour
         return anims;
     }
 
-    private void OfferEmotes()
-    {
-        Player otherPlayer;
-        if(OfferEmoteTriggered(out otherPlayer))
-        {
-           if(monitorMe)print("i will hug you now");
-        }
-    }
 
-    private bool OfferEmoteTriggered(out Player otherPlayer)
-    {   
-        return PlayersManager.Instance.CanPlayerInteract(player, out otherPlayer);
-    }
 
 }

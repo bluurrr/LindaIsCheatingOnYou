@@ -14,6 +14,7 @@ public class IKAnimationManager : MonoBehaviour
     public IKAnimationDatabank iKAnimationDatabank;
     private Dictionary<InteractionTarget.IK_Point_Player, Transform> interactionTargets =  new Dictionary<InteractionTarget.IK_Point_Player, Transform>();
     public Pose currentPose;
+    private IKAnimation _offerAnimation;
 
     public void Init()
     {
@@ -26,6 +27,7 @@ public class IKAnimationManager : MonoBehaviour
 
     public void Run()
     {
+        OfferEmotes();
         if(currentPose == null) return;
         currentPose.RunAnim(fullBodyBipedIK);
         StopEmote();
@@ -42,28 +44,23 @@ public class IKAnimationManager : MonoBehaviour
 
     public void PlayEmote(IKAnimation ikObj)
     {
+        if((currentPose) && ikObj.iD == currentPose.ID) return;
         ClearIKPoses();
         Pose pose = Instantiate(ikObj.prefab, ikSpawn).GetComponent<Pose>();
         pose.Init();
-        print("pose init ");
-
-        foreach(var reaction in ikObj.reactions)
-        {
-            switch(reaction.iK_Animation_ID)
-            {
-                case IKAnimation.IK_Animation_ID.hug_hugging:
-                print("found this reaction " + reaction.triggerEvent.ToString());
-                //EventManager.StartListening(reaction.triggerEvent.ToString(), Play_Hugging);
-                break;  
-            }
-        }
-        print("player interact ");
 
         Player otherPlayer;
+        if(ikObj.offerAnimation != IKAnimation.IK_Animation_ID.none)
+        {
+            SetOfferEmote(ikObj.offerAnimation);
+        }
+        else
+        {
+            _offerAnimation = null; 
+        }
+
         if(PlayersManager.Instance.CanPlayerInteract(player,out otherPlayer))
         {
-            print("if pass ");
-
             foreach(var point in ikObj.playerInteractionTargets)
             {
                 Transform playerPoint = otherPlayer.iKAnimationManager.GetIKPoint(point.playerPoint);
@@ -80,10 +77,10 @@ public class IKAnimationManager : MonoBehaviour
         {
             currentPose.StopAnim(fullBodyBipedIK);
             currentPose = null;
+            _offerAnimation = null;
             ClearIKPoses();
         }
     }
-
     private void ClearIKPoses()
     {
         foreach(Transform emote in ikSpawn)
@@ -91,19 +88,29 @@ public class IKAnimationManager : MonoBehaviour
             Destroy(emote.gameObject);
         }
     }
-
-    private void Play_Hugging()
-    { 
-        print("current pose: " + currentPose.ID);
-        if(currentPose.ID == IKAnimation.IK_Animation_ID.hug_hugging) return;
-        print("after return ");
-        IKAnimation animation = iKAnimationDatabank.GetAnimation(IKAnimation.IK_Animation_ID.hug_hugging);
-        print("after animation ");
-        PlayEmote(animation);
-        print("after play ");
-
-        //EventManager.StopListening(Consts.Events.playerCanInteract.ToString(), Play_Hugging);
+    private void OfferEmotes()
+    {
+        Player otherPlayer;
+        if(OfferEmoteTriggered(out otherPlayer))
+        {
+            PlayOfferAnimation();
+        }
     }
+    private bool OfferEmoteTriggered(out Player otherPlayer)
+    {   
+        return PlayersManager.Instance.CanPlayerInteract(player, out otherPlayer);
+    }
+    private void SetOfferEmote(IKAnimation.IK_Animation_ID id)
+    { 
+        _offerAnimation = iKAnimationDatabank.GetAnimation(id);
+    }
+    private void PlayOfferAnimation()
+    {
+        if(_offerAnimation == null) return;
+        PlayEmote(_offerAnimation);
+    }
+
+
 
 
 
