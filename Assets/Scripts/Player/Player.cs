@@ -19,6 +19,8 @@ namespace PlayerComponents
         public EmotionManager emotionManager;
         public Movement_XZ movement_XZ;
         public Transform frontAnchor;
+        public EmoteManager emoteManager;
+        private bool _pauseInput;
 
         public bool TestingDisable;
 
@@ -28,13 +30,15 @@ namespace PlayerComponents
             animManager.Init();
             iKAnimationManager.Init();
             emotionManager.Init(loudOut);
+            emoteManager.Init();
         }
         private void FixedUpdate()
         {
+            iKAnimationManager.Run();
             if(TestingDisable) return;
+            if(_pauseInput) return; 
             movement_XZ.Movement();
             animManager.WalkingAnimations();
-            iKAnimationManager.Run();
             //lineOfSight.Look(); 
             //selector.Select();
             UIManager.Instance.RunEmoteMenu(iKAnimationManager.headspawn);
@@ -61,6 +65,15 @@ namespace PlayerComponents
         public void CloseEmoteMenu()
         {
             UIManager.Instance.emoteMenu.CloseEmoteMenu();    
+        }
+
+        public void PauseInput_All()
+        {
+            _pauseInput = true; 
+        }
+        public void EnableInput_All()
+        {
+            _pauseInput = false; 
         }
     }
 

@@ -44,6 +44,10 @@ namespace PlayerComponents
         {
             animator.SetInteger(MOVEMENT_STYLE_ID, STYLE_ID_WALK);
         }
+        public void SetMovementToIdle()
+        {
+            animator.SetInteger(MOVEMENT_ID, ANIM_MOVEMENT_IDLE);
+        }
 
         private bool IsMoving()
         {

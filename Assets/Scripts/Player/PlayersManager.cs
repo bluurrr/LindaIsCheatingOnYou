@@ -19,7 +19,7 @@ public class PlayersManager : UnityInSceneSingleton<PlayersManager>
 
     public bool CanPlayerInteract(Player player, out Player interactablePlayer) 
     {
-        float minDist = .25f;
+        float minDist = .05f;
         foreach(Player p in players)
         {
             if(p != player)
@@ -27,7 +27,6 @@ public class PlayersManager : UnityInSceneSingleton<PlayersManager>
                 if(Vector3.Distance(player.frontAnchor.position, p.frontAnchor.position) <= minDist)
                 {
                     interactablePlayer = p; 
-                    EventManager.TriggerEvent(Consts.EVENT_PLAYER_CAN_INTERACT);
                     return true;
                 }
             }

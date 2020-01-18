@@ -29,11 +29,11 @@ MonoBehaviour:
     effectors: 050000000600000000000000
     offerAnimation: 3
     playerInteractionTargets:
-    - name: Left Hand
-      effector: 5
-      playerPoint: 1
     - name: Right Hand
       effector: 6
+      playerPoint: 7
+    - name: Left Hand
+      effector: 5
       playerPoint: 0
   - name: Hug Offer
     iD: 2

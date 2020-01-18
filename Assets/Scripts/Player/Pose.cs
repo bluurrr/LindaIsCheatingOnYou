@@ -61,8 +61,8 @@ public class Pose : MonoBehaviour
 
         if(activeBody)
         {
-            player.solver.bodyEffector.position = targetDictionary[FullBodyBipedEffector.RightHand].position;
-            player.solver.bodyEffector.rotation = targetDictionary[FullBodyBipedEffector.RightHand].rotation;
+            player.solver.bodyEffector.position = targetDictionary[FullBodyBipedEffector.Body].position;
+            player.solver.bodyEffector.rotation = targetDictionary[FullBodyBipedEffector.Body].rotation;
             player.solver.bodyEffector.positionWeight = 1;
             player.solver.bodyEffector.rotationWeight = 1;
         }

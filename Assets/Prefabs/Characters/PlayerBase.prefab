@@ -362,6 +362,7 @@ GameObject:
   - component: {fileID: 2049066471533914099}
   - component: {fileID: 56668288792464898}
   - component: {fileID: 4904817698472874447}
+  - component: {fileID: 1761141892164466443}
   m_Layer: 0
   m_Name: PlayerBase
   m_TagString: Player
@@ -431,6 +432,7 @@ MonoBehaviour:
   emotionManager: {fileID: 6318990182535365114}
   movement_XZ: {fileID: 4904817698472874447}
   frontAnchor: {fileID: 172840276120887217}
+  emoteManager: {fileID: 1761141892164466443}
   TestingDisable: 0
 --- !u!114 &5409500382845377186
 MonoBehaviour:
@@ -523,7 +525,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 5642474205120641214}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.4
+  m_Radius: 0.183
   m_Speed: 2
   m_Acceleration: 8
   avoidancePriority: 50
@@ -1054,6 +1056,8 @@ MonoBehaviour:
   headspawn: {fileID: 268817840080912762}
   iKAnimationDatabank: {fileID: 11400000, guid: bc06bb5ae1929b84eb84afcd32b5f4d5,
     type: 2}
+  currentPose: {fileID: 0}
+  emoteManager: {fileID: 1761141892164466443}
 --- !u!114 &8578410700690839605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1179,6 +1183,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed_walk: 2
   speed_run: 4
+--- !u!114 &1761141892164466443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5642474205120641214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dd0116648b2f10478bf22c59df04197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 7551450874304313721}
+  animManager: {fileID: 5409500382845377186}
 --- !u!1 &7528648120417124539
 GameObject:
   m_ObjectHideFlags: 0

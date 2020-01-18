@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using RootMotion.FinalIK;
 using PlayerComponents;
+using UnityEngine.Events;
 
 public class IKAnimationManager : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class IKAnimationManager : MonoBehaviour
     public IKAnimationDatabank iKAnimationDatabank;
     private Dictionary<InteractionTarget.IK_Point_Player, Transform> interactionTargets =  new Dictionary<InteractionTarget.IK_Point_Player, Transform>();
     public Pose currentPose;
+    public EmoteManager emoteManager;
     private IKAnimation _offerAnimation;
 
     public void Init()
@@ -65,9 +67,12 @@ public class IKAnimationManager : MonoBehaviour
             {
                 Transform playerPoint = otherPlayer.iKAnimationManager.GetIKPoint(point.playerPoint);
                 pose.targetDictionary[point.effector].transform.SetParent(playerPoint);
+                pose.targetDictionary[point.effector].transform.localPosition = new Vector3(0,0,0);
             }
         }
 
+        UnityAction emoteAction = emoteManager.GetEmoteAction(ikObj.iD);
+        if(emoteAction != null) emoteAction.Invoke();
 
         currentPose = pose; 
     }
@@ -79,6 +84,7 @@ public class IKAnimationManager : MonoBehaviour
             currentPose = null;
             _offerAnimation = null;
             ClearIKPoses();
+            player.EnableInput_All();
         }
     }
     private void ClearIKPoses()
