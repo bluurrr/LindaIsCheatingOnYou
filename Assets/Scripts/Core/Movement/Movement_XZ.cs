@@ -12,13 +12,11 @@ public class Movement_XZ : MonoBehaviour
 
     public void Movement()
     {
-        print("movent going");
         Vector3 input = new Vector3(Input.GetAxis(AXIS_HORIZONTAL), 0, Input.GetAxis(AXIS_VERTICAL));
         Quaternion targetRotation = Quaternion.LookRotation(input, Vector3.up);
 
         if (IsMoving() == 1)
         {
-            print("moving forward");
             transform.rotation = targetRotation;
             transform.Translate(Vector3.forward * Speed() * IsMoving() * Time.deltaTime);
         }
@@ -28,7 +26,6 @@ public class Movement_XZ : MonoBehaviour
 
     public int IsMoving()
     {
-        print("is moving: " + (Input.GetAxis(AXIS_HORIZONTAL) != 0 || Input.GetAxis(AXIS_VERTICAL) != 0));
         return (Input.GetAxis(AXIS_HORIZONTAL) != 0 || Input.GetAxis(AXIS_VERTICAL) != 0) ? 1 : 0;
     }
 
