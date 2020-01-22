@@ -13,10 +13,11 @@ public class IKAnimationManager : MonoBehaviour
     public InteractionSystem interactionSystem;
     public Transform ikSpawn, headspawn;
     public IKAnimationDatabank iKAnimationDatabank;
-    private Dictionary<InteractionTarget.IK_Point_Player, Transform> interactionTargets =  new Dictionary<InteractionTarget.IK_Point_Player, Transform>();
     public Pose currentPose;
     public EmoteManager emoteManager;
-    private IKAnimation _offerAnimation;
+    public PlayerInteractionManager playerInteractionManager;
+    private Dictionary<InteractionTarget.IK_Point_Player, Transform> interactionTargets =  new Dictionary<InteractionTarget.IK_Point_Player, Transform>();
+
 
     public void Init()
     {
@@ -29,10 +30,8 @@ public class IKAnimationManager : MonoBehaviour
 
     public void Run()
     {
-        OfferEmotes();
         if(currentPose == null) return;
         currentPose.RunAnim(fullBodyBipedIK);
-        StopEmote();
     }
 
     public Transform GetIKPoint(InteractionTarget.IK_Point_Player target)
@@ -54,11 +53,7 @@ public class IKAnimationManager : MonoBehaviour
         Player otherPlayer;
         if(ikObj.offerAnimation != IKAnimation.IK_Animation_ID.none)
         {
-            SetOfferEmote(ikObj.offerAnimation);
-        }
-        else
-        {
-            _offerAnimation = null; 
+            playerInteractionManager.SetOfferEmote(ikObj.offerAnimation);
         }
 
         if(PlayersManager.Instance.CanPlayerInteract(player,out otherPlayer))
@@ -76,16 +71,17 @@ public class IKAnimationManager : MonoBehaviour
 
         currentPose = pose; 
     }
-    private void StopEmote()
+
+    public IKAnimation GetIKAnim(IKAnimation.IK_Animation_ID id)
     {
-        if(Input.GetButtonDown("B"))
-        {
-            currentPose.StopAnim(fullBodyBipedIK);
-            currentPose = null;
-            _offerAnimation = null;
-            ClearIKPoses();
-            player.EnableInput_All();
-        }
+       return iKAnimationDatabank.GetAnimation(id);
+    }
+    public void StopEmote()
+    {
+        if(currentPose == null) return;
+        currentPose.StopAnim(fullBodyBipedIK);
+        currentPose = null;
+        ClearIKPoses();
     }
     private void ClearIKPoses()
     {
@@ -94,27 +90,7 @@ public class IKAnimationManager : MonoBehaviour
             Destroy(emote.gameObject);
         }
     }
-    private void OfferEmotes()
-    {
-        Player otherPlayer;
-        if(OfferEmoteTriggered(out otherPlayer))
-        {
-            PlayOfferAnimation();
-        }
-    }
-    private bool OfferEmoteTriggered(out Player otherPlayer)
-    {   
-        return PlayersManager.Instance.CanPlayerInteract(player, out otherPlayer);
-    }
-    private void SetOfferEmote(IKAnimation.IK_Animation_ID id)
-    { 
-        _offerAnimation = iKAnimationDatabank.GetAnimation(id);
-    }
-    private void PlayOfferAnimation()
-    {
-        if(_offerAnimation == null) return;
-        PlayEmote(_offerAnimation);
-    }
+
 
 
 

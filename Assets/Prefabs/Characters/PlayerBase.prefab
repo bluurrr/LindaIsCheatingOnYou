@@ -363,6 +363,7 @@ GameObject:
   - component: {fileID: 56668288792464898}
   - component: {fileID: 4904817698472874447}
   - component: {fileID: 1761141892164466443}
+  - component: {fileID: 936224981601846996}
   m_Layer: 0
   m_Name: PlayerBase
   m_TagString: Player
@@ -425,14 +426,13 @@ MonoBehaviour:
   runSpeed: 3
   animManager: {fileID: 5409500382845377186}
   actionsManager: {fileID: 5517184841365937206}
-  lineOfSight: {fileID: 5641387577899878884}
-  selector: {fileID: 5641387577899878887}
   agent: {fileID: 5641387577899878886}
   iKAnimationManager: {fileID: 2673720925491939110}
   emotionManager: {fileID: 6318990182535365114}
   movement_XZ: {fileID: 4904817698472874447}
   frontAnchor: {fileID: 172840276120887217}
   emoteManager: {fileID: 1761141892164466443}
+  playerInteractionManager: {fileID: 936224981601846996}
   TestingDisable: 0
 --- !u!114 &5409500382845377186
 MonoBehaviour:
@@ -1058,6 +1058,7 @@ MonoBehaviour:
     type: 2}
   currentPose: {fileID: 0}
   emoteManager: {fileID: 1761141892164466443}
+  playerInteractionManager: {fileID: 936224981601846996}
 --- !u!114 &8578410700690839605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1197,6 +1198,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 7551450874304313721}
   animManager: {fileID: 5409500382845377186}
+--- !u!114 &936224981601846996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5642474205120641214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b00cc256f9e01b848bb4ac0f50412e19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 7551450874304313721}
+  iKAnimationManager: {fileID: 2673720925491939110}
 --- !u!1 &7528648120417124539
 GameObject:
   m_ObjectHideFlags: 0

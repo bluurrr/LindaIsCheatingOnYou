@@ -28,5 +28,14 @@ public class EmoteManager : MonoBehaviour
     {
         player.PauseInput_All();
         animManager.SetMovementToIdle();
+        SetAsOffered();
+    }
+    private void SetAsOffered()
+    {
+        Player otherPlayer;
+        if(PlayersManager.Instance.CanPlayerInteract(player, out otherPlayer))
+        {
+            otherPlayer.playerInteractionManager.SetOfferedPlayer(player);
+        }
     }
 }

@@ -12,17 +12,17 @@ namespace PlayerComponents
         public float walkSpeed, runSpeed;
         public AnimManager animManager;
         public ActionsManager actionsManager;
-        public LineOfSight lineOfSight;
-        public Selector selector;
         public NavMeshAgent agent;
         public IKAnimationManager iKAnimationManager;
         public EmotionManager emotionManager;
         public Movement_XZ movement_XZ;
         public Transform frontAnchor;
         public EmoteManager emoteManager;
+        public PlayerInteractionManager playerInteractionManager;
+        public bool TestingDisable;
+
         private bool _pauseInput;
 
-        public bool TestingDisable;
 
     
         public void Init(PlayerLoudOut loudOut)
@@ -32,16 +32,20 @@ namespace PlayerComponents
             emotionManager.Init(loudOut);
             emoteManager.Init();
         }
-        private void FixedUpdate()
+        private void Update()
+        {
+            Run();
+        }
+
+        private void Run()
         {
             iKAnimationManager.Run();
             if(TestingDisable) return;
             if(_pauseInput) return; 
             movement_XZ.Movement();
             animManager.WalkingAnimations();
-            //lineOfSight.Look(); 
-            //selector.Select();
             UIManager.Instance.RunEmoteMenu(iKAnimationManager.headspawn);
+            playerInteractionManager.Run();
         }
 
         private void SetDestination(Vector3 destination)
