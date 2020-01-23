@@ -40,12 +40,12 @@ namespace PlayerComponents
         private void Run()
         {
             iKAnimationManager.Run();
+            playerInteractionManager.Run();
             if(TestingDisable) return;
             if(_pauseInput) return; 
             movement_XZ.Movement();
             animManager.WalkingAnimations();
             UIManager.Instance.RunEmoteMenu(iKAnimationManager.headspawn);
-            playerInteractionManager.Run();
         }
 
         private void SetDestination(Vector3 destination)

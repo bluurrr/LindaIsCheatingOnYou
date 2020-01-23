@@ -45,11 +45,12 @@ public class IKAnimationManager : MonoBehaviour
 
     public void PlayEmote(IKAnimation ikObj)
     {
+
         if((currentPose) && ikObj.iD == currentPose.ID) return;
         ClearIKPoses();
         Pose pose = Instantiate(ikObj.prefab, ikSpawn).GetComponent<Pose>();
         pose.Init();
-
+        print("trying to play:" + ikObj.iD);
         Player otherPlayer;
         if(ikObj.offerAnimation != IKAnimation.IK_Animation_ID.none)
         {
@@ -70,6 +71,8 @@ public class IKAnimationManager : MonoBehaviour
         if(emoteAction != null) emoteAction.Invoke();
 
         currentPose = pose; 
+        print("current pose:" + currentPose.ID);
+
     }
 
     public IKAnimation GetIKAnim(IKAnimation.IK_Animation_ID id)
@@ -78,6 +81,7 @@ public class IKAnimationManager : MonoBehaviour
     }
     public void StopEmote()
     {
+        print("Stop emote");
         if(currentPose == null) return;
         currentPose.StopAnim(fullBodyBipedIK);
         currentPose = null;

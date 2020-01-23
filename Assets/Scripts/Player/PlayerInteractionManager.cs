@@ -14,6 +14,7 @@ public class PlayerInteractionManager : MonoBehaviour
 
     public void Run()
     {
+        print("run");
         OfferEmotes();
         OfferedEmote();
     }
@@ -37,15 +38,15 @@ public class PlayerInteractionManager : MonoBehaviour
     }
     private void OfferEmotes()
     {
+        print("offer emote");
+        StopOfferListen();
+
         if(_offerAnimation == null) return;
-        
         Player otherPlayer;
         if(OfferEmoteTriggered(out otherPlayer))
         {
             PlayOfferAnimation();
         }
-
-        StopOfferListen();
     }
     private bool OfferEmoteTriggered(out Player otherPlayer)
     {   
@@ -61,6 +62,7 @@ public class PlayerInteractionManager : MonoBehaviour
     {
         if(Input.GetButtonDown("B"))
         {
+            print("pressing b");
             StopOffer();
         }
     }
@@ -87,9 +89,10 @@ public class PlayerInteractionManager : MonoBehaviour
 
     public void StopOffered()
     {
-        StopEmote();
         if(_offeredPlayer)
         {
+            _offeredPlayer = null;
+            StopEmote();
             _offeredPlayer.playerInteractionManager.StopOffer();
         }    
     }
