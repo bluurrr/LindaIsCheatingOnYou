@@ -3,16 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using RootMotion.FinalIK;
 using PlayerComponents;
+using System;
 
 public class EmotionManager : MonoBehaviour
 {
     public enum Emotions{idle, happy, sad, mad, anxious, loveing};
     public Emotions currentEmotion;
-    public int sadLevel, madLevel, happyLevel, anxiousLevel, loveingLevel;
     public List<EmoteLevelInformation> Sad, Mad, Happy, Anxious, Loveing;
     public Player player;
     public bool monitorMe;
-    
+    private Dictionary<string, Emotions> reactions = new Dictionary<string, Emotions>();
+    private Dictionary<Emotions, int> experience = new Dictionary<Emotions, int>();
+    private const int LEVEL_INCRIMENT = 100;
+
+
     public void Init(PlayerLoudOut loudOut)
     {
         Sad = loudOut.Sad;
@@ -20,25 +24,58 @@ public class EmotionManager : MonoBehaviour
         Happy = loudOut.Happy;
         Anxious = loudOut.Anxious;
         Loveing = loudOut.Loveing; 
-    }
 
+        foreach(var reaction in loudOut.reactions)
+        {
+            reactions.Add(reaction.ID(), reaction.emotion);
+        }
+
+        var emotions = Enum.GetValues(typeof(Emotions));
+        foreach(Emotions emot in emotions)
+        {
+            experience.Add(emot, 0);
+        }
+    }
     public List<IKAnimation.IK_Animation_ID> GetCurrentMoodEmotes()
     {
         switch(currentEmotion)
         {
             case Emotions.happy:
-                return GetMoodEmotes(happyLevel, Happy);
+                return GetMoodEmotes(GetLevel(currentEmotion), Happy);
             case Emotions.sad:
-                return GetMoodEmotes(sadLevel, Sad);
+                return GetMoodEmotes(GetLevel(currentEmotion), Sad);
             case Emotions.mad:
-                return GetMoodEmotes(madLevel, Mad);
+                return GetMoodEmotes(GetLevel(currentEmotion), Mad);
             case Emotions.anxious:
-                return GetMoodEmotes(anxiousLevel, Anxious);
+                return GetMoodEmotes(GetLevel(currentEmotion), Anxious);
             case Emotions.loveing:
-                return GetMoodEmotes(loveingLevel, Loveing);
+                return GetMoodEmotes(GetLevel(currentEmotion), Loveing);
         }
         return null;
     }
+    public void AddSadExperience(int xp)
+    {
+        AddExperience(Emotions.sad, xp); 
+    }
+    public void AddHappyExperience(int xp)
+    {
+        AddExperience(Emotions.happy, xp); 
+    }
+    public void AddMadExperience(int xp)
+    {
+        AddExperience(Emotions.mad, xp); 
+    }
+    public void AddAnxiousExperience(int xp)
+    {
+        AddExperience(Emotions.anxious, xp); 
+    }
+    public void AddLovingExperience(int xp)
+    {
+        AddExperience(Emotions.loveing, xp); 
+    }
+
+
+
 
     private List<IKAnimation.IK_Animation_ID> GetMoodEmotes(int level, List<EmoteLevelInformation> emotion)
     {
@@ -52,6 +89,21 @@ public class EmotionManager : MonoBehaviour
         }
         return anims;
     }
+    private int ExperienceRequired(int level)
+    {
+        return LEVEL_INCRIMENT * level;
+    }
+    private void AddExperience(Emotions emotion, int xp)
+    {
+        int newXP = experience[emotion] + xp;
+        experience[emotion] = newXP;
+    }
+    private int GetLevel(Emotions emotion)
+    {
+        return Mathf.RoundToInt(experience[emotion] / LEVEL_INCRIMENT);
+    }
+
+
 
 
 

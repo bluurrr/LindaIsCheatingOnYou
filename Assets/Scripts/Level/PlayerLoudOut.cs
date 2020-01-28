@@ -8,4 +8,5 @@ public class PlayerLoudOut
     public string name;
     public CharacterDataBank.Characters character;
     public List<EmoteLevelInformation> Sad, Mad, Happy, Anxious, Loveing;
+    public List<CustomReaction> reactions;
 }

@@ -29,6 +29,13 @@ MonoBehaviour:
         iK_Animation: 0
       Anxious: []
       Loveing: []
+      reactions:
+      - emote: 2
+        outcome: 0
+        emotion: 3
+      - emote: 2
+        outcome: 1
+        emotion: 2
     - name: Jamie
       character: 1
       Sad: []
@@ -36,3 +43,4 @@ MonoBehaviour:
       Happy: []
       Anxious: []
       Loveing: []
+      reactions: []
