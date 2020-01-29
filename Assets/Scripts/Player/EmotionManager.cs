@@ -53,30 +53,20 @@ public class EmotionManager : MonoBehaviour
         }
         return null;
     }
-    public void AddSadExperience(int xp)
+    public void PlayCustomReaction(string key)
     {
-        AddExperience(Emotions.sad, xp); 
-    }
-    public void AddHappyExperience(int xp)
-    {
-        AddExperience(Emotions.happy, xp); 
-    }
-    public void AddMadExperience(int xp)
-    {
-        AddExperience(Emotions.mad, xp); 
-    }
-    public void AddAnxiousExperience(int xp)
-    {
-        AddExperience(Emotions.anxious, xp); 
-    }
-    public void AddLovingExperience(int xp)
-    {
-        AddExperience(Emotions.loveing, xp); 
+        if(reactions.ContainsKey(key))
+        {
+            Emotions emotion = reactions[key];
+            AddExperience(emotion, 101); 
+            PlayReaction(emotion); 
+        }
     }
 
+    private void PlayReaction(Emotions emotion)
+    {
 
-
-
+    }
     private List<IKAnimation.IK_Animation_ID> GetMoodEmotes(int level, List<EmoteLevelInformation> emotion)
     {
         List<IKAnimation.IK_Animation_ID> anims = new List<IKAnimation.IK_Animation_ID>();
@@ -102,9 +92,5 @@ public class EmotionManager : MonoBehaviour
     {
         return Mathf.RoundToInt(experience[emotion] / LEVEL_INCRIMENT);
     }
-
-
-
-
 
 }

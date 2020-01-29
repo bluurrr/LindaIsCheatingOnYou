@@ -9,7 +9,7 @@ public class PlayerInteractionManager : MonoBehaviour
     public IKAnimationManager iKAnimationManager;
     public Player _offeredPlayer;
     private IKAnimation _offerAnimation;
-    private float _offeredDistBreak = 1;
+    private float _offeredDistBreak = 1; 
 
 
     public void Run()
@@ -31,6 +31,7 @@ public class PlayerInteractionManager : MonoBehaviour
 
         if(OfferedDistBreak())
         {
+            string key = _offeredPlayer.iKAnimationManager.currentPose.ID + "_" + CustomReaction.Outcome.rejected_soft;
             StopOffered();
         }
         StopOfferedListen();
@@ -80,7 +81,8 @@ public class PlayerInteractionManager : MonoBehaviour
     {
         if(Input.GetButtonDown("B"))
         {
-            StopOffered();
+            string key = _offeredPlayer.iKAnimationManager.currentPose.ID + "_" + CustomReaction.Outcome.rejected_hard;
+            StopOffered(); 
         }
     }
 
