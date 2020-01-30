@@ -474,11 +474,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentEmotion: 0
-  sadLevel: 0
-  madLevel: 0
-  happyLevel: 1
-  anxiousLevel: 0
-  loveingLevel: 0
   Sad: []
   Mad: []
   Happy: []
@@ -486,6 +481,7 @@ MonoBehaviour:
   Loveing: []
   player: {fileID: 7551450874304313721}
   monitorMe: 0
+  animManager: {fileID: 5409500382845377186}
 --- !u!114 &5641387577899878884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1212,6 +1208,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 7551450874304313721}
   iKAnimationManager: {fileID: 2673720925491939110}
+  emotionManager: {fileID: 6318990182535365114}
+  _offeredPlayer: {fileID: 0}
 --- !u!1 &7528648120417124539
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,6 +7,7 @@ public class PlayerInteractionManager : MonoBehaviour
 {
     public Player player;
     public IKAnimationManager iKAnimationManager;
+    public EmotionManager emotionManager;
     public Player _offeredPlayer;
     private IKAnimation _offerAnimation;
     private float _offeredDistBreak = 1; 
@@ -31,7 +32,10 @@ public class PlayerInteractionManager : MonoBehaviour
 
         if(OfferedDistBreak())
         {
-            string key = _offeredPlayer.iKAnimationManager.currentPose.ID + "_" + CustomReaction.Outcome.rejected_soft;
+            string otherPlayerKey = _offeredPlayer.iKAnimationManager.currentPose.ID + "_" + CustomReaction.Outcome.rejected_soft;
+            string playerKey = _offeredPlayer.iKAnimationManager.currentPose.ID + "_" + CustomReaction.Outcome.rejecting_soft;
+            _offeredPlayer.emotionManager.PlayCustomReaction(otherPlayerKey);
+            emotionManager.PlayCustomReaction(playerKey);
             StopOffered();
         }
         StopOfferedListen();
@@ -81,7 +85,10 @@ public class PlayerInteractionManager : MonoBehaviour
     {
         if(Input.GetButtonDown("B"))
         {
-            string key = _offeredPlayer.iKAnimationManager.currentPose.ID + "_" + CustomReaction.Outcome.rejected_hard;
+            string otherPlayerKey = _offeredPlayer.iKAnimationManager.currentPose.ID + "_" + CustomReaction.Outcome.rejected_hard;
+            string playerKey = _offeredPlayer.iKAnimationManager.currentPose.ID + "_" + CustomReaction.Outcome.rejecting_hard;
+            _offeredPlayer.emotionManager.PlayCustomReaction(otherPlayerKey);
+            emotionManager.PlayCustomReaction(playerKey);
             StopOffered(); 
         }
     }

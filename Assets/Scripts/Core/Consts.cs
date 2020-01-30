@@ -12,7 +12,6 @@ public class Consts
     public const string LAYER_FLOOR = "Floor";
     public const string LAYER_PLAYER = "Player";
     public const string EVENT_PLAYER_CAN_INTERACT = "playerCanInteract";
-
     public enum Events {playerCanInteract};
 
 

@@ -12,6 +12,7 @@ public class EmotionManager : MonoBehaviour
     public List<EmoteLevelInformation> Sad, Mad, Happy, Anxious, Loveing;
     public Player player;
     public bool monitorMe;
+    public AnimManager animManager;
     private Dictionary<string, Emotions> reactions = new Dictionary<string, Emotions>();
     private Dictionary<Emotions, int> experience = new Dictionary<Emotions, int>();
     private const int LEVEL_INCRIMENT = 100;
@@ -55,8 +56,10 @@ public class EmotionManager : MonoBehaviour
     }
     public void PlayCustomReaction(string key)
     {
+        print("Key: " + key);
         if(reactions.ContainsKey(key))
         {
+            print("Key was found: " + key);
             Emotions emotion = reactions[key];
             AddExperience(emotion, 101); 
             PlayReaction(emotion); 
@@ -65,7 +68,8 @@ public class EmotionManager : MonoBehaviour
 
     private void PlayReaction(Emotions emotion)
     {
-
+        print("play reaction: " + emotion);
+        SetMotionStyleID(emotion);
     }
     private List<IKAnimation.IK_Animation_ID> GetMoodEmotes(int level, List<EmoteLevelInformation> emotion)
     {
@@ -91,6 +95,27 @@ public class EmotionManager : MonoBehaviour
     private int GetLevel(Emotions emotion)
     {
         return Mathf.RoundToInt(experience[emotion] / LEVEL_INCRIMENT);
+    }
+    private void SetMotionStyleID(Emotions emotion)
+    {
+        print("set motion: " + emotion);
+        switch(emotion)
+        {
+            case Emotions.happy:
+                break;
+            case Emotions.sad:
+                print("setting to sad");
+                animManager.ChangeToWalkSad();
+                break;
+            case Emotions.mad:
+                print("setting to angry");
+                animManager.ChangeToWalkAngry();
+                break;
+            case Emotions.anxious:
+                break;
+            case Emotions.loveing:
+                break;
+        }
     }
 
 }

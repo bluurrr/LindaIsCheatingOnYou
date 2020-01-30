@@ -39,7 +39,7 @@ public class PickUp : InteractableObject
         transform.parent.transform.position = GetPutDownDestination();
         collider.isTrigger = false;
         navMeshObject.enabled = true;
-        player.animManager.ChangeToWalk();
+        player.animManager.ChangeToWalkNeutral();
         player.actionsManager.RemoveFloorAction(putDownID);
         putDownID = "";
     }
