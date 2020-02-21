@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: LevelDatabase
   m_EditorClassIdentifier: 
   allLevels:
-  - name: Test
+  - name: Bank
     map: {fileID: 871839345545414148, guid: 28f3db37549f4704c94a18fabdb4854d, type: 3}
     playerLoudOuts:
     - name: Linda

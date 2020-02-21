@@ -28,7 +28,7 @@ namespace PlayerComponents
         {
             if(IsMoving())
             {
-                animator.SetInteger(MOVEMENT_ID, ANIM_MOVEMENT_WALK);
+                animator.SetInteger(MOVEMENT_ID, (movement.IsRunning()) ? ANIM_MOVEMENT_RUN : ANIM_MOVEMENT_WALK);
                 return; 
             }
             animator.SetInteger(MOVEMENT_ID, ANIM_MOVEMENT_IDLE);

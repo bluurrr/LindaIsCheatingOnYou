@@ -67,4 +67,9 @@ public class Movement_XZ : MonoBehaviour
         running = false;
     }
 
+    public bool IsRunning()
+    {
+        return running; 
+    }
+
 }

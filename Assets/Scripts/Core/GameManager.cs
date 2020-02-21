@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using PlayerComponents;
 using UnityEngine;
 using Singletons;
+using Cinemachine;
+using System.Linq;
 
 public class GameManager : UnityInSceneSingleton<GameManager>
 {
@@ -13,6 +15,7 @@ public class GameManager : UnityInSceneSingleton<GameManager>
     public PlayersManager playerManager;
     public EmoteMenu emoteMenu;
     public IKAnimationDatabank iKAnimationDatabank;
+    public CinemachineTargetGroup cinemachineTargetGroup;
     private LevelData currentLevel; 
     private Dictionary<CharacterDataBank.Characters, Player> playerDictionary = new Dictionary<CharacterDataBank.Characters, Player>();
 
@@ -64,9 +67,18 @@ public class GameManager : UnityInSceneSingleton<GameManager>
         Vector3 jamieSpawn = jamieSpawnPoints[Random.Range(0, jamieSpawnPoints.Count)].transform.position;
         GameObject jamie = Instantiate(characterDataBank.GetCharacter(CharacterDataBank.Characters.jamie), jamieSpawn, characterDataBank.GetCharacter(CharacterDataBank.Characters.jamie).transform.rotation);
         GameObject linda = Instantiate(characterDataBank.GetCharacter(CharacterDataBank.Characters.linda), lindaSpawn, characterDataBank.GetCharacter(CharacterDataBank.Characters.linda).transform.rotation);
+        AddCameraTarget(jamie.transform);
+        AddCameraTarget(linda.transform);
         playerDictionary.Add(CharacterDataBank.Characters.jamie, jamie.GetComponent<Player>());
         playerDictionary.Add(CharacterDataBank.Characters.linda, linda.GetComponent<Player>());
         playerManager.Init();
+    }
+
+    private void AddCameraTarget(Transform trans)
+    {
+        List<Transform> targets = cinemachineTargetGroup.m_Targets.OfType<Transform>().ToList();;
+        targets.Add(trans);
+        cinemachineTargetGroup.m_Targets.ToArray();
     }
 
     private void PopulatePlayerLoudouts()

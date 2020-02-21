@@ -345,25 +345,24 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5645933110277429874}
-  - component: {fileID: 5701006393854298002}
   - component: {fileID: 7551450874304313721}
   - component: {fileID: 5409500382845377186}
   - component: {fileID: 5517184841365937206}
   - component: {fileID: 6318990182535365114}
-  - component: {fileID: 5641387577899878884}
-  - component: {fileID: 5641387577899878887}
-  - component: {fileID: 5641387577899878886}
-  - component: {fileID: 1367690081177187021}
-  - component: {fileID: 3754287403226285102}
-  - component: {fileID: -8940124129124880075}
   - component: {fileID: 2673720925491939110}
+  - component: {fileID: 1761141892164466443}
+  - component: {fileID: 936224981601846996}
   - component: {fileID: 8578410700690839605}
+  - component: {fileID: 7294750322260965070}
   - component: {fileID: 6738640671877882461}
   - component: {fileID: 2049066471533914099}
   - component: {fileID: 56668288792464898}
   - component: {fileID: 4904817698472874447}
-  - component: {fileID: 1761141892164466443}
-  - component: {fileID: 936224981601846996}
+  - component: {fileID: 5701006393854298002}
+  - component: {fileID: 5641387577899878886}
+  - component: {fileID: 1367690081177187021}
+  - component: {fileID: -8940124129124880075}
+  - component: {fileID: 3754287403226285102}
   m_Layer: 0
   m_Name: PlayerBase
   m_TagString: Player
@@ -390,25 +389,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 141.70401, z: 0}
---- !u!95 &5701006393854298002
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5642474205120641214}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 535156c74f90dde48be444746515be0d, type: 3}
-  m_Controller: {fileID: 9100000, guid: bca0f3a7fd3e85a4fb776d527ca7732b, type: 2}
-  m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &7551450874304313721
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -482,7 +462,7 @@ MonoBehaviour:
   player: {fileID: 7551450874304313721}
   monitorMe: 0
   animManager: {fileID: 5409500382845377186}
---- !u!114 &5641387577899878884
+--- !u!114 &2673720925491939110
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -491,14 +471,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 5642474205120641214}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0332b5bd884717145890024fe7714bb3, type: 3}
+  m_Script: {fileID: 11500000, guid: 8c81da5f1ccfeb54da3f1f452dc02427, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lineRenderer: {fileID: 5641387577332459067}
-  start: {fileID: 5718044425152168246}
-  end: {fileID: 5641387576678180466}
   player: {fileID: 7551450874304313721}
---- !u!114 &5641387577899878887
+  ModelRoot: {fileID: 0}
+  fullBodyBipedIK: {fileID: 1367690081177187021}
+  interactionSystem: {fileID: 3754287403226285102}
+  ikSpawn: {fileID: 870159361866426647}
+  headspawn: {fileID: 268817840080912762}
+  iKAnimationDatabank: {fileID: 11400000, guid: bc06bb5ae1929b84eb84afcd32b5f4d5,
+    type: 2}
+  currentPose: {fileID: 0}
+  emoteManager: {fileID: 1761141892164466443}
+  playerInteractionManager: {fileID: 936224981601846996}
+--- !u!114 &1761141892164466443
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -507,11 +494,216 @@ MonoBehaviour:
   m_GameObject: {fileID: 5642474205120641214}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a0194c9e2832684ea8c2d6d18b4d0d2, type: 3}
+  m_Script: {fileID: 11500000, guid: 9dd0116648b2f10478bf22c59df04197, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 7551450874304313721}
-  agent: {fileID: 5641387577899878886}
+  animManager: {fileID: 5409500382845377186}
+--- !u!114 &936224981601846996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5642474205120641214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b00cc256f9e01b848bb4ac0f50412e19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 7551450874304313721}
+  iKAnimationManager: {fileID: 2673720925491939110}
+  emotionManager: {fileID: 6318990182535365114}
+  _offeredPlayer: {fileID: 0}
+--- !u!114 &8578410700690839605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5642474205120641214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d94300dc9c426484d99b0bcbb0708855, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  input: 4
+  Axis_IsOne:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7551450874304313721}
+        m_MethodName: OpenEmoteMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  Axis_IsZero:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7551450874304313721}
+        m_MethodName: CloseEmoteMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  Axis_IsNegativeOne:
+    m_PersistentCalls:
+      m_Calls: []
+  inputTest: 0
+--- !u!114 &7294750322260965070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5642474205120641214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d94300dc9c426484d99b0bcbb0708855, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  input: 5
+  Axis_IsOne:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4904817698472874447}
+        m_MethodName: RunOn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  Axis_IsZero:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4904817698472874447}
+        m_MethodName: RunOff
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  Axis_IsNegativeOne:
+    m_PersistentCalls:
+      m_Calls: []
+  inputTest: 0
+--- !u!114 &6738640671877882461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5642474205120641214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42a666529707c7b45a1a5f33d1dfa04d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  input: 0
+  buttonDown:
+    m_PersistentCalls:
+      m_Calls: []
+  button:
+    m_PersistentCalls:
+      m_Calls: []
+  buttonUp:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &2049066471533914099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5642474205120641214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42a666529707c7b45a1a5f33d1dfa04d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  input: 1
+  buttonDown:
+    m_PersistentCalls:
+      m_Calls: []
+  button:
+    m_PersistentCalls:
+      m_Calls: []
+  buttonUp:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &56668288792464898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5642474205120641214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42a666529707c7b45a1a5f33d1dfa04d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  input: 3
+  buttonDown:
+    m_PersistentCalls:
+      m_Calls: []
+  button:
+    m_PersistentCalls:
+      m_Calls: []
+  buttonUp:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &4904817698472874447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5642474205120641214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1407d101c687ead428afdb45e81b9b3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed_walk: 2
+  speed_run: 4
+--- !u!95 &5701006393854298002
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5642474205120641214}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 535156c74f90dde48be444746515be0d, type: 3}
+  m_Controller: {fileID: 9100000, guid: bca0f3a7fd3e85a4fb776d527ca7732b, type: 2}
+  m_CullingMode: 1
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!195 &5641387577899878886
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -990,6 +1182,20 @@ MonoBehaviour:
     spineStiffness: 0.5
     pullBodyVertical: 0.5
     pullBodyHorizontal: 0
+--- !u!114 &-8940124129124880075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5642474205120641214}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cc0304f5a703416ebff81ad105ddf18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionObject: {fileID: 0}
+  effectors: 00000000
 --- !u!114 &3754287403226285102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1018,198 +1224,6 @@ MonoBehaviour:
     lerpSpeed: 5
     weightSpeed: 1
     isPaused: 0
---- !u!114 &-8940124129124880075
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5642474205120641214}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8cc0304f5a703416ebff81ad105ddf18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactionObject: {fileID: 0}
-  effectors: 00000000
---- !u!114 &2673720925491939110
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5642474205120641214}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c81da5f1ccfeb54da3f1f452dc02427, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 7551450874304313721}
-  ModelRoot: {fileID: 0}
-  fullBodyBipedIK: {fileID: 1367690081177187021}
-  interactionSystem: {fileID: 3754287403226285102}
-  ikSpawn: {fileID: 870159361866426647}
-  headspawn: {fileID: 268817840080912762}
-  iKAnimationDatabank: {fileID: 11400000, guid: bc06bb5ae1929b84eb84afcd32b5f4d5,
-    type: 2}
-  currentPose: {fileID: 0}
-  emoteManager: {fileID: 1761141892164466443}
-  playerInteractionManager: {fileID: 936224981601846996}
---- !u!114 &8578410700690839605
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5642474205120641214}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d94300dc9c426484d99b0bcbb0708855, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  input: 4
-  Axis_IsOne:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7551450874304313721}
-        m_MethodName: OpenEmoteMenu
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  Axis_IsZero:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7551450874304313721}
-        m_MethodName: CloseEmoteMenu
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  Axis_IsNegativeOne:
-    m_PersistentCalls:
-      m_Calls: []
-  inputTest: 0
---- !u!114 &6738640671877882461
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5642474205120641214}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42a666529707c7b45a1a5f33d1dfa04d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  input: 0
-  buttonDown:
-    m_PersistentCalls:
-      m_Calls: []
-  button:
-    m_PersistentCalls:
-      m_Calls: []
-  buttonUp:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &2049066471533914099
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5642474205120641214}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42a666529707c7b45a1a5f33d1dfa04d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  input: 1
-  buttonDown:
-    m_PersistentCalls:
-      m_Calls: []
-  button:
-    m_PersistentCalls:
-      m_Calls: []
-  buttonUp:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &56668288792464898
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5642474205120641214}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42a666529707c7b45a1a5f33d1dfa04d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  input: 3
-  buttonDown:
-    m_PersistentCalls:
-      m_Calls: []
-  button:
-    m_PersistentCalls:
-      m_Calls: []
-  buttonUp:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &4904817698472874447
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5642474205120641214}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1407d101c687ead428afdb45e81b9b3a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed_walk: 2
-  speed_run: 4
---- !u!114 &1761141892164466443
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5642474205120641214}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dd0116648b2f10478bf22c59df04197, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 7551450874304313721}
-  animManager: {fileID: 5409500382845377186}
---- !u!114 &936224981601846996
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5642474205120641214}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b00cc256f9e01b848bb4ac0f50412e19, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 7551450874304313721}
-  iKAnimationManager: {fileID: 2673720925491939110}
-  emotionManager: {fileID: 6318990182535365114}
-  _offeredPlayer: {fileID: 0}
 --- !u!1 &7528648120417124539
 GameObject:
   m_ObjectHideFlags: 0

@@ -85,6 +85,7 @@ public class PlayerInteractionManager : MonoBehaviour
     {
         if(Input.GetButtonDown("B"))
         {
+            print("rejected hard");
             string otherPlayerKey = _offeredPlayer.iKAnimationManager.currentPose.ID + "_" + CustomReaction.Outcome.rejected_hard;
             string playerKey = _offeredPlayer.iKAnimationManager.currentPose.ID + "_" + CustomReaction.Outcome.rejecting_hard;
             _offeredPlayer.emotionManager.PlayCustomReaction(otherPlayerKey);
