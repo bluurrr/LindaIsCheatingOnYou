@@ -11,6 +11,7 @@ public class GameManager : UnityInSceneSingleton<GameManager>
     public Transform mapSpawn;
     public ActionDataBank actionDataBank;
     public CharacterDataBank characterDataBank; 
+    public ParticleSystemDataBank particleSystemDataBank;
     public LevelDataBase levelManager;
     public PlayersManager playerManager;
     public EmoteMenu emoteMenu;
@@ -29,6 +30,7 @@ public class GameManager : UnityInSceneSingleton<GameManager>
     {
         iKAnimationDatabank.Init();
         characterDataBank.Init();
+        particleSystemDataBank.Init();
         actionDataBank.Init();
         emoteMenu.Init(); 
     }
@@ -76,9 +78,10 @@ public class GameManager : UnityInSceneSingleton<GameManager>
 
     private void AddCameraTarget(Transform trans)
     {
-        List<Transform> targets = cinemachineTargetGroup.m_Targets.OfType<Transform>().ToList();;
-        targets.Add(trans);
-        cinemachineTargetGroup.m_Targets.ToArray();
+        var target = new CinemachineTargetGroup.Target {target = trans, radius = 1, weight = 1}; 
+        var tempList = cinemachineTargetGroup.m_Targets.ToList();
+        tempList.Add(target);        
+        cinemachineTargetGroup.m_Targets = tempList.ToArray();
     }
 
     private void PopulatePlayerLoudouts()

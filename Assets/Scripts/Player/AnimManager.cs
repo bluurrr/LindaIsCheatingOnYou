@@ -10,6 +10,7 @@ namespace PlayerComponents
         public Animator animator;
         public Transform carryAnchor;
         public Movement_XZ movement;
+        public ParticleSystemManager particleSystemMananger;
         private const int ANIM_MOVEMENT_IDLE = 0;
         private const int ANIM_MOVEMENT_WALK = 1;
         private const int ANIM_MOVEMENT_RUN = 2;
@@ -60,6 +61,16 @@ namespace PlayerComponents
         private bool IsMoving()
         {
             return movement.IsMoving() != 0;
+        }
+
+        public void PlayerLeftWalkPS()
+        {
+            particleSystemMananger.PlayParticle(ParticleSystemObject.Type.poof, InteractionTarget.IK_Point_Player.Foot_Under_Left);
+        }
+        
+        public void PlayerRightWalkPS()
+        {
+            particleSystemMananger.PlayParticle(ParticleSystemObject.Type.poof, InteractionTarget.IK_Point_Player.Foot_Under_Right);
         }
     }
 }
