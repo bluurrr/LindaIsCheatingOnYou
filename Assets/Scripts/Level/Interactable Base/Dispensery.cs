@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using PlayerComponents;
 using UnityEngine.Events;
 
 public class Dispensery : InteractableObject
@@ -15,7 +14,6 @@ public class Dispensery : InteractableObject
 
     public void Use(Player player)
     {
-        //if the dispensery is full return
         if(_currentUsers.Count >= maxNumberOfUsers && !_currentUsers.ContainsKey(player)) return; 
         if(!_currentUsers.ContainsKey(player))
         {
@@ -26,6 +24,7 @@ public class Dispensery : InteractableObject
     private void Press(Player player)
     {
         _currentUsers[player]++;
+        if(_currentUsers[player] < numberOfPresses) return; 
     }
     private void ShowUI(Player player)
     {

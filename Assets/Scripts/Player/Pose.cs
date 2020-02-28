@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using PlayerComponents;
 using RootMotion.FinalIK;
 using UnityEngine;
 

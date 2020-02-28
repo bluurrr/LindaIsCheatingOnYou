@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using PlayerComponents;
 using Singletons;
 
 public class PlayersManager : UnityInSceneSingleton<PlayersManager>
@@ -24,7 +23,7 @@ public class PlayersManager : UnityInSceneSingleton<PlayersManager>
         {
             if(p != player)
             {
-                if(Vector3.Distance(player.frontAnchor.position, p.frontAnchor.position) <= minDist)
+                if(Vector3.Distance(player.iKAnimationManager.GetIKPoint(InteractionTarget.IK_Point_Player.Static_Front).position, p.iKAnimationManager.GetIKPoint(InteractionTarget.IK_Point_Player.Static_Front).position) <= minDist)
                 {
                     interactablePlayer = p; 
                     return true;

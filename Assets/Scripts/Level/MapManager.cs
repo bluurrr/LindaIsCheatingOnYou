@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using System.Linq;
 
 public class MapManager : MonoBehaviour
 {
    public NavMeshSurface navMeshSurface; 
+   public List<InteractableObject> interactables;
 
    void Awake()
    {
@@ -15,6 +17,7 @@ public class MapManager : MonoBehaviour
    public void Init()
    {
       navMeshSurface.BuildNavMesh();
+      interactables = GameObject.FindObjectsOfType<InteractableObject>().ToList();
    }
 
 }

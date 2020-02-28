@@ -12,7 +12,6 @@ public class CustomReaction
     public EmotionManager.Emotions emotion; 
     public string ID()
     {
-        Debug.Log("Getting id: " + emote + "_" + outcome);
         return emote + "_" + outcome;
     }
 }

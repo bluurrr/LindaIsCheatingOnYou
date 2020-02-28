@@ -2,9 +2,9 @@
 using UnityEngine.AI;
 using System.Collections;
 using DG.Tweening;
+using System.Collections.Generic;
 
-namespace PlayerComponents
-{
+
     public class Player : MonoBehaviour
     {
         public enum Characters{Linda, Tim, Jimmy, Mark};
@@ -16,21 +16,22 @@ namespace PlayerComponents
         public IKAnimationManager iKAnimationManager;
         public EmotionManager emotionManager;
         public Movement_XZ movement_XZ;
-        public Transform frontAnchor;
         public EmoteManager emoteManager;
         public PlayerInteractionManager playerInteractionManager;
+        public InteractableObjectManager interactableObjectManager;
         public bool TestingDisable;
 
         private bool _pauseInput;
 
 
     
-        public void Init(PlayerLoudOut loudOut)
+        public void Init(PlayerLoudOut loudOut, List<InteractableObject> interactables)
         {
             animManager.Init();
             iKAnimationManager.Init();
             emotionManager.Init(loudOut);
             emoteManager.Init();
+            interactableObjectManager.Init(interactables);
         }
         private void Update()
         {
@@ -41,6 +42,7 @@ namespace PlayerComponents
         {
             iKAnimationManager.Run();
             playerInteractionManager.Run();
+            interactableObjectManager.Run();
             if(TestingDisable) return;
             if(_pauseInput) return; 
             movement_XZ.Movement();
@@ -80,5 +82,3 @@ namespace PlayerComponents
             _pauseInput = false; 
         }
     }
-
-}

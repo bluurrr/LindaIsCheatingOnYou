@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace PlayerComponents
-{
     public class AnimManager : MonoBehaviour
     {
         public Animator animator;
@@ -18,6 +16,7 @@ namespace PlayerComponents
         private const int STYLE_ID_CARRY = 1;
         private const int STYLE_ID_SAD = 2;
         private const int STYLE_ID_ANGRY = 3;
+        private const int STYLE_ID_INTERACT = 4;
         private const string MOVEMENT_ID = "movementID";
         private const string MOVEMENT_STYLE_ID = "movementStyleID";
 
@@ -40,6 +39,10 @@ namespace PlayerComponents
             animator.SetInteger(MOVEMENT_STYLE_ID, STYLE_ID_CARRY);
             obj.transform.SetParent(carryAnchor);
             obj.transform.localPosition = Vector3.zero;
+        }
+        public void ChangeToInteract()
+        {
+            animator.SetInteger(MOVEMENT_STYLE_ID, STYLE_ID_INTERACT);
         }
         public void ChangeToWalkNeutral()
         {
@@ -73,5 +76,4 @@ namespace PlayerComponents
             particleSystemMananger.PlayParticle(ParticleSystemObject.Type.poof, InteractionTarget.IK_Point_Player.Foot_Under_Right);
         }
     }
-}
 

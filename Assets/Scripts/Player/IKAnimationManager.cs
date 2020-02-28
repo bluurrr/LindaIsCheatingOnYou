@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using RootMotion.FinalIK;
-using PlayerComponents;
 using UnityEngine.Events;
 
 public class IKAnimationManager : MonoBehaviour

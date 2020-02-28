@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using PlayerComponents;
 using DG.Tweening;
 using UnityEngine.AI;
 using Level;
@@ -10,10 +9,11 @@ public class InteractableObject : MonoBehaviour
 {
     public NavMeshObstacle navMeshObject;
     public Outline outline; 
-    public Collider collider; 
+    public Collider collider;
+    public float useDistance = 1.5f;
+    public bool debug; 
     protected List<Action> actions = new List<Action>();
     private bool inUse;
-    private const float USE_DISTANCE = 1.5f;
 
     public void Awake()
     {
@@ -29,7 +29,8 @@ public class InteractableObject : MonoBehaviour
     }
     public bool CanInteract(Player player)
     {
-        return Vector3.Distance(transform.position, player.transform.position) <= USE_DISTANCE;
+        if(debug) print("TRACKING: " + gameObject.name + " is " + Vector3.Distance(transform.position, player.transform.position) + " from " + player.gameObject.name + ". Use dist: "+ useDistance);
+        return Vector3.Distance(transform.position, player.transform.position) <= useDistance;
     }
 
     public virtual void Investigate(Player player)

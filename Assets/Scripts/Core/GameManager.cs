@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using PlayerComponents;
 using UnityEngine;
 using Singletons;
 using Cinemachine;
@@ -19,6 +18,7 @@ public class GameManager : UnityInSceneSingleton<GameManager>
     public CinemachineTargetGroup cinemachineTargetGroup;
     private LevelData currentLevel; 
     private Dictionary<CharacterDataBank.Characters, Player> playerDictionary = new Dictionary<CharacterDataBank.Characters, Player>();
+    private MapManager mapManager;
 
     new void Awake()
     {
@@ -38,7 +38,8 @@ public class GameManager : UnityInSceneSingleton<GameManager>
     private void SpawnLevel()
     {
         currentLevel = levelManager.GetRandomLevel();
-        Instantiate(currentLevel.map, mapSpawn.transform.position, currentLevel.map.transform.rotation, mapSpawn); 
+        GameObject map = Instantiate(currentLevel.map, mapSpawn.transform.position, currentLevel.map.transform.rotation, mapSpawn); 
+        mapManager = map.GetComponent<MapManager>();
     }
 
     private void PopulateLevel()
@@ -90,7 +91,7 @@ public class GameManager : UnityInSceneSingleton<GameManager>
         {
             if(playerDictionary.ContainsKey(loudOut.character))
             {
-                playerDictionary[loudOut.character].Init(loudOut);
+                playerDictionary[loudOut.character].Init(loudOut, mapManager.interactables);
             }
         }
     }

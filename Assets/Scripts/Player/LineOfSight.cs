@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using PlayerComponents;
 using UnityEngine;
 
 public class LineOfSight : MonoBehaviour

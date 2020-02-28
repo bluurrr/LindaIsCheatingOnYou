@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using RootMotion.FinalIK;
-using PlayerComponents;
 using System;
 
 public class EmotionManager : MonoBehaviour
@@ -64,6 +63,11 @@ public class EmotionManager : MonoBehaviour
         }
     }
 
+    public void SetMovementStyleToCurrentMood()
+    {
+        SetMotionStyleID(currentEmotion);
+    }
+
     private void PlayReaction(Emotions emotion)
     {
         SetMotionStyleID(emotion);
@@ -98,6 +102,7 @@ public class EmotionManager : MonoBehaviour
         switch(emotion)
         {
             case Emotions.happy:
+                animManager.ChangeToWalkNeutral();
                 break;
             case Emotions.sad:
                 animManager.ChangeToWalkSad();
@@ -106,8 +111,10 @@ public class EmotionManager : MonoBehaviour
                 animManager.ChangeToWalkAngry();
                 break;
             case Emotions.anxious:
+                animManager.ChangeToWalkSad();
                 break;
             case Emotions.loveing:
+                animManager.ChangeToWalkNeutral();
                 break;
         }
     }
