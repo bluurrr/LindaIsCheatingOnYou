@@ -8,16 +8,19 @@ public class Dispensery : InteractableObject
     public int numberOfPresses;
     public int maxNumberOfUsers;
     public GameObject reward;  
-    public UnityEvent OnCompletedInteraction;
-    private int _numberOfUsers;
     private Dictionary <Player, int> _currentUsers = new Dictionary<Player,int>();
 
-    public void Use(Player player)
+    public override void Use(Player player)
     {
-        if(_currentUsers.Count >= maxNumberOfUsers && !_currentUsers.ContainsKey(player)) return; 
+        if(!CanInteract(player)) return; 
+        if(_currentUsers.Count >= maxNumberOfUsers && !_currentUsers.ContainsKey(player)) return;
+
         if(!_currentUsers.ContainsKey(player))
         {
             _currentUsers.Add(player, 0);
+            player.PauseInput_All();
+            player.animManager.SetMovementToIdle();
+            StartCoroutine(player.Face(transform.position, .25f));
         }
         Press(player);
     }
@@ -25,9 +28,19 @@ public class Dispensery : InteractableObject
     {
         _currentUsers[player]++;
         if(_currentUsers[player] < numberOfPresses) return; 
+        
     }
     private void ShowUI(Player player)
     {
 
+    }
+
+    public override void Cancel(Player player)
+    {
+        if(_currentUsers.ContainsKey(player))
+        {
+            _currentUsers.Remove(player);
+            player.EnableInput_All();
+        }
     }
 }

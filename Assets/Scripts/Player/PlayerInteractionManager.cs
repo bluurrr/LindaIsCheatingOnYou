@@ -62,6 +62,7 @@ public class PlayerInteractionManager : MonoBehaviour
 
     private void StopOfferListen()
     {
+        if(_offerAnimation == null)return;
         if(Input.GetButtonDown("B"))
         {
             StopOffer();

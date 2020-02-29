@@ -8,6 +8,7 @@ public class InteractableObjectManager : MonoBehaviour
      public EmotionManager emotionManager;
      public AnimManager animManager;
      private List<InteractableObject> _interactables; 
+     private InteractableObject _objectInUse; 
 
      public void Init(List<InteractableObject> interactables)
      {
@@ -21,14 +22,36 @@ public class InteractableObjectManager : MonoBehaviour
          {
              if(item.CanInteract(player))
              {
-                print("can interact");
                 animManager.ChangeToInteract();
+                Use(item);
              }
              else
              {
-                print("cannot interact");
                 emotionManager.SetMovementStyleToCurrentMood();
              }
+         }
+         Cancel();
+     }
+
+     private void Use(InteractableObject item)
+     {
+         if(_objectInUse) return;
+         if(Input.GetButtonDown("A")) 
+         {
+            item.Use(player);
+            _objectInUse = item;
+         }
+     }
+
+     private void Cancel()
+     {
+         print("is it this");
+         if(!_objectInUse) return;
+         if(Input.GetButtonDown("B")) 
+         {
+            print("b is being hit");
+            _objectInUse.Cancel(player);
+            _objectInUse = null;
          }
      }
 }

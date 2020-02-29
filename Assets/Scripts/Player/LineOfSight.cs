@@ -34,12 +34,12 @@ public class LineOfSight : MonoBehaviour
             if(!interactableObject) return;
 
             currentHoveredObject = interactableObject;  
-            interactableObject.Hover();
+            // interactableObject.Hover();
         }
         private void UnhoverObject()
         {
             if(!currentHoveredObject) return;
-            currentHoveredObject.Unhover();
+            // currentHoveredObject.Unhover();
             currentHoveredObject = null;
         }
 

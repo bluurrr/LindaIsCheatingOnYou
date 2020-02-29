@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using System.Linq;
+using System;
+
+
 
 public class MapManager : MonoBehaviour
 {
@@ -17,7 +20,6 @@ public class MapManager : MonoBehaviour
    public void Init()
    {
       navMeshSurface.BuildNavMesh();
-      interactables = GameObject.FindObjectsOfType<InteractableObject>().ToList();
    }
 
 }
