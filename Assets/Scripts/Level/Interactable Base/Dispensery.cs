@@ -7,13 +7,12 @@ public class Dispensery : InteractableObject
 {
     public int numberOfPresses;
     public int maxNumberOfUsers;
-    public GameObject reward;  
     private Dictionary <Player, int> _currentUsers = new Dictionary<Player,int>();
 
     public override void Use(Player player)
     {
         if(!CanInteract(player)) return; 
-        if(_currentUsers.Count >= maxNumberOfUsers && !_currentUsers.ContainsKey(player)) return;
+        if(IsFull(player)) return;
 
         if(!_currentUsers.ContainsKey(player))
         {
@@ -24,18 +23,17 @@ public class Dispensery : InteractableObject
         }
         Press(player);
     }
-    private void Press(Player player)
-    {
-        _currentUsers[player]++;
-        if(_currentUsers[player] < numberOfPresses) return; 
-        
-    }
-    private void ShowUI(Player player)
-    {
-
-    }
-
     public override void Cancel(Player player)
+    {
+            RemoveUser(player);
+    }
+
+
+    protected void Press(Player player)
+    {
+        _currentUsers[player]++;   
+    }
+    protected void RemoveUser(Player player)
     {
         if(_currentUsers.ContainsKey(player))
         {
@@ -43,4 +41,24 @@ public class Dispensery : InteractableObject
             player.EnableInput_All();
         }
     }
+    protected bool ButtonPressGoalMeet(Player player)
+    {
+        if(!_currentUsers.ContainsKey(player)) return false;
+        return _currentUsers[player] >= numberOfPresses;
+    }
+    protected bool IsOnEntry(Player player)
+    {
+        return !IsFull(player) && !_currentUsers.ContainsKey(player);
+    }
+
+    private bool IsFull(Player player)
+    {
+        return _currentUsers.Count >= maxNumberOfUsers && !_currentUsers.ContainsKey(player);
+    }
+    private void ShowUI(Player player)
+    {
+
+    }
+
+
 }

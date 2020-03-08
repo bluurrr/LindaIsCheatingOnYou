@@ -431,9 +431,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 5701006393854298002}
-  carryAnchor: {fileID: 7774919654457713812}
   movement: {fileID: 4904817698472874447}
   particleSystemMananger: {fileID: 6826233864264563448}
+  ikAnimationManager: {fileID: 2673720925491939110}
 --- !u!114 &5517184841365937206
 MonoBehaviour:
   m_ObjectHideFlags: 0

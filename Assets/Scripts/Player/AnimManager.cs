@@ -6,9 +6,9 @@ using UnityEngine.AI;
     public class AnimManager : MonoBehaviour
     {
         public Animator animator;
-        public Transform carryAnchor;
         public Movement_XZ movement;
         public ParticleSystemManager particleSystemMananger;
+        public IKAnimationManager ikAnimationManager;
         private const int ANIM_MOVEMENT_IDLE = 0;
         private const int ANIM_MOVEMENT_WALK = 1;
         private const int ANIM_MOVEMENT_RUN = 2;
@@ -17,8 +17,11 @@ using UnityEngine.AI;
         private const int STYLE_ID_SAD = 2;
         private const int STYLE_ID_ANGRY = 3;
         private const int STYLE_ID_INTERACT = 4;
+        private const int STYLE_ID_CARRY_UNERARM = 5;
         private const string MOVEMENT_ID = "movementID";
         private const string MOVEMENT_STYLE_ID = "movementStyleID";
+        private const string TRIGGER_GRAB_UNDERARM = "grabUnderarm";
+
 
         public void Init()
         {
@@ -37,7 +40,13 @@ using UnityEngine.AI;
         public void ChangeToCarry(Transform obj)
         {
             animator.SetInteger(MOVEMENT_STYLE_ID, STYLE_ID_CARRY);
-            obj.transform.SetParent(carryAnchor);
+            obj.transform.SetParent(ikAnimationManager.GetIKPoint(InteractionTarget.IK_Point_Player.Object_Front));
+            obj.transform.localPosition = Vector3.zero;
+        }
+        public void ChangeToCarryUnderArm(Transform obj)
+        {
+            animator.SetInteger(MOVEMENT_STYLE_ID, STYLE_ID_CARRY_UNERARM);
+            obj.transform.SetParent(ikAnimationManager.GetIKPoint(InteractionTarget.IK_Point_Player.Object_UnderArm_Left));
             obj.transform.localPosition = Vector3.zero;
         }
         public void ChangeToInteract()
@@ -59,6 +68,11 @@ using UnityEngine.AI;
         public void SetMovementToIdle()
         {
             animator.SetInteger(MOVEMENT_ID, ANIM_MOVEMENT_IDLE);
+        }
+
+        public void Grab_Underarm()
+        {
+            animator.SetTrigger(TRIGGER_GRAB_UNDERARM);
         }
 
         private bool IsMoving()
