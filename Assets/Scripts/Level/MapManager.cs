@@ -17,7 +17,7 @@ public class MapManager : MonoBehaviour
       Init();
    }
 
-   public void Init()
+   public virtual void Init()
    {
       navMeshSurface.BuildNavMesh();
    }

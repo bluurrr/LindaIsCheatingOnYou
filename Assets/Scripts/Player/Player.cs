@@ -20,18 +20,19 @@ using System.Collections.Generic;
         public PlayerInteractionManager playerInteractionManager;
         public InteractableObjectManager interactableObjectManager;
         public bool TestingDisable;
-
+        public MapManager mapManager; 
         private bool _pauseInput;
 
 
     
-        public void Init(PlayerLoudOut loudOut, List<InteractableObject> interactables)
+        public void Init(PlayerLoudOut loudOut, List<InteractableObject> interactables, MapManager mapManager)
         {
+            this.mapManager = mapManager;
             animManager.Init();
             iKAnimationManager.Init();
             emotionManager.Init(loudOut);
             emoteManager.Init();
-            interactableObjectManager.Init(interactables);
+            interactableObjectManager.Init(this.mapManager);
         }
         private void Update()
         {

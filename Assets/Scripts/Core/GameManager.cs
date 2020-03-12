@@ -91,7 +91,7 @@ public class GameManager : UnityInSceneSingleton<GameManager>
         {
             if(playerDictionary.ContainsKey(loudOut.character))
             {
-                playerDictionary[loudOut.character].Init(loudOut, mapManager.interactables);
+                playerDictionary[loudOut.character].Init(loudOut, mapManager.interactables, mapManager);
             }
         }
     }

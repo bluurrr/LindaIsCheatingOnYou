@@ -34,6 +34,10 @@ public class MoneyTable : Dispensery
     public void OnEnter(Player player)
     {
         GameObject moneyBag = Instantiate(bag, player.transform.position,player.iKAnimationManager.GetIKPoint(InteractionTarget.IK_Point_Player.Object_UnderArm_Left).transform.rotation);
+        MoneyBag moneyBagScript = moneyBag.GetComponent<MoneyBag>();
+        moneyBagScript.rigidbody.useGravity = false;
+        moneyBagScript.collider.isTrigger = true;
+        player.mapManager.interactables.Add(moneyBagScript);
         player.animManager.ChangeToCarryUnderArm(moneyBag.transform);
     }
     public void OnButtonPress(Player player)
@@ -42,11 +46,8 @@ public class MoneyTable : Dispensery
     }
     public void OnComplete(Player player)
     {
-       GameObject moneyBag = player.iKAnimationManager.GetIKPoint(InteractionTarget.IK_Point_Player.Object_UnderArm_Left).transform.GetChild(0).gameObject;
-       moneyBag.transform.rotation =  player.iKAnimationManager.GetIKPoint(InteractionTarget.IK_Point_Player.Object_Front).transform.rotation;
-        player.animManager.ChangeToCarry(moneyBag.transform);
+       MoneyBag moneyBag = player.iKAnimationManager.GetIKPoint(InteractionTarget.IK_Point_Player.Object_UnderArm_Left).transform.GetChild(0).gameObject.GetComponent<MoneyBag>();
+       moneyBag.Use(player);
         RemoveUser(player);
-        player.interactableObjectManager.SetCanInteract(false);
-
     }
 }
