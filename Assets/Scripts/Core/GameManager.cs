@@ -19,6 +19,8 @@ public class GameManager : UnityInSceneSingleton<GameManager>
     private LevelData currentLevel; 
     private Dictionary<CharacterDataBank.Characters, Player> playerDictionary = new Dictionary<CharacterDataBank.Characters, Player>();
     private MapManager mapManager;
+    private int _groupMoneyPool;
+    private Dictionary<Player, int> _individualMoney = new Dictionary<Player, int>();
 
     new void Awake()
     {
@@ -26,6 +28,17 @@ public class GameManager : UnityInSceneSingleton<GameManager>
         SpawnLevel();
         PopulateLevel();
     }
+
+    public void AddToGroupMoneyPool(int amount)
+    {
+       _groupMoneyPool += amount; 
+    }
+
+    public void AddToIndividualMoneyPool(Player player, int amount)
+    {
+        _individualMoney[player] += amount; 
+    }
+
     private void Init()
     {
         iKAnimationDatabank.Init();
@@ -74,6 +87,8 @@ public class GameManager : UnityInSceneSingleton<GameManager>
         AddCameraTarget(linda.transform);
         playerDictionary.Add(CharacterDataBank.Characters.jamie, jamie.GetComponent<Player>());
         playerDictionary.Add(CharacterDataBank.Characters.linda, linda.GetComponent<Player>());
+        _individualMoney.Add(jamie.GetComponent<Player>(), 0);
+        _individualMoney.Add(linda.GetComponent<Player>(), 0);
         playerManager.Init();
     }
 

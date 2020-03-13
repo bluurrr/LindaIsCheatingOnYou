@@ -100,6 +100,8 @@ MonoBehaviour:
   useDistance: 1.5
   debug: 0
   rigidbody: {fileID: 3848205322337865328}
+  collectionPS: {fileID: 2879528272740359799, guid: 9316278bf1f4ce749aecf626d8dc4286,
+    type: 3}
 --- !u!54 &3848205322337865328
 Rigidbody:
   m_ObjectHideFlags: 0

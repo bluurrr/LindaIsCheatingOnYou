@@ -5,6 +5,7 @@ using UnityEngine;
 public class MoneyTable : Dispensery
 {
     public GameObject bag;
+    private const int REWARD = 1000;
 
     public override void Use(Player player)
     {
@@ -42,6 +43,8 @@ public class MoneyTable : Dispensery
     }
     public void OnButtonPress(Player player)
     {
+        MoneyBag moneyBag = player.iKAnimationManager.GetIKPoint(InteractionTarget.IK_Point_Player.Object_UnderArm_Left).transform.GetChild(0).gameObject.GetComponent<MoneyBag>();
+        moneyBag.value += REWARD;
         player.animManager.Grab_Underarm();
     }
     public void OnComplete(Player player)

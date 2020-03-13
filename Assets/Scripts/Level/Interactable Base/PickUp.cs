@@ -30,4 +30,5 @@ public class PickUp : InteractableObject
         player.animManager.ChangeToCarry(transform);
         player.interactableObjectManager.SetObjectInUse(this); 
     }
+    
 }
