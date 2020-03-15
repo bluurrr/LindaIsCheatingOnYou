@@ -39,7 +39,7 @@ public class MoneyTable : Dispensery
         moneyBagScript.rigidbody.useGravity = false;
         moneyBagScript.collider.isTrigger = true;
         player.mapManager.interactables.Add(moneyBagScript);
-        player.animManager.ChangeToCarryUnderArm(moneyBag.transform);
+        player.animManager.ChangeToCarry_UnderArm(moneyBag.transform);
     }
     public void OnButtonPress(Player player)
     {

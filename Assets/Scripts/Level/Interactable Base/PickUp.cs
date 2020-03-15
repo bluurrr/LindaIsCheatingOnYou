@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PickUp : InteractableObject
 {
+    public enum AnimTypes {twoHanded_front, twoHanded_weapon};
+    public AnimTypes animType; 
     public Rigidbody rigidbody; 
     public override void Use(Player player)
     {
@@ -26,9 +28,21 @@ public class PickUp : InteractableObject
         rigidbody.useGravity = false; 
         rigidbody.isKinematic = true;
         collider.isTrigger = true;
-        transform.rotation =  player.iKAnimationManager.GetIKPoint(InteractionTarget.IK_Point_Player.Object_Front).transform.rotation;
-        player.animManager.ChangeToCarry(transform);
+        CarryAnim(animType, player);
         player.interactableObjectManager.SetObjectInUse(this); 
+    }
+
+    private void CarryAnim(AnimTypes type, Player player)
+    {
+        switch (type)
+        {
+            case AnimTypes.twoHanded_front: 
+                player.animManager.ChangeToCarry_Front(transform);
+            break;
+            case AnimTypes.twoHanded_weapon: 
+                player.animManager.ChangeToCarry_TwoHanded_Weapon(transform);
+            break;
+        }
     }
     
 }

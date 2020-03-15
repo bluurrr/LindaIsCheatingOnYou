@@ -18,9 +18,11 @@ using UnityEngine.AI;
         private const int STYLE_ID_ANGRY = 3;
         private const int STYLE_ID_INTERACT = 4;
         private const int STYLE_ID_CARRY_UNERARM = 5;
+        private const int STYLE_ID_CARRY_TWO_HANDED_WEAPON= 6;
         private const string MOVEMENT_ID = "movementID";
         private const string MOVEMENT_STYLE_ID = "movementStyleID";
         private const string TRIGGER_GRAB_UNDERARM = "grabUnderarm";
+        private const string TRIGGER_TWO_HAND_SWING= "twoHandSwing";
 
 
         public void Init()
@@ -37,17 +39,26 @@ using UnityEngine.AI;
             animator.SetInteger(MOVEMENT_ID, ANIM_MOVEMENT_IDLE);
         }
 
-        public void ChangeToCarry(Transform obj)
+        public void ChangeToCarry_Front(Transform obj)
         {
             animator.SetInteger(MOVEMENT_STYLE_ID, STYLE_ID_CARRY);
             obj.transform.SetParent(ikAnimationManager.GetIKPoint(InteractionTarget.IK_Point_Player.Object_Front));
             obj.transform.localPosition = Vector3.zero;
+            obj.transform.rotation = new Quaternion(0,0,0,0);
         }
-        public void ChangeToCarryUnderArm(Transform obj)
+        public void ChangeToCarry_UnderArm(Transform obj)
         {
             animator.SetInteger(MOVEMENT_STYLE_ID, STYLE_ID_CARRY_UNERARM);
             obj.transform.SetParent(ikAnimationManager.GetIKPoint(InteractionTarget.IK_Point_Player.Object_UnderArm_Left));
             obj.transform.localPosition = Vector3.zero;
+            obj.transform.rotation = new Quaternion(0,0,0,0);
+        }
+        public void ChangeToCarry_TwoHanded_Weapon(Transform obj)
+        {
+            animator.SetInteger(MOVEMENT_STYLE_ID, STYLE_ID_CARRY_TWO_HANDED_WEAPON);
+            obj.transform.SetParent(ikAnimationManager.GetIKPoint(InteractionTarget.IK_Point_Player.Hand_Right));
+            obj.transform.localPosition = Vector3.zero;
+            obj.transform.rotation = new Quaternion(0,0,0,0);
         }
         public void ChangeToInteract()
         {
@@ -73,6 +84,11 @@ using UnityEngine.AI;
         public void Grab_Underarm()
         {
             animator.SetTrigger(TRIGGER_GRAB_UNDERARM);
+        }
+
+        public void TwoHand_Swing()
+        {
+            animator.SetTrigger(TRIGGER_TWO_HAND_SWING);
         }
 
         private bool IsMoving()
